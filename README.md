@@ -12,6 +12,7 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 - Benutzeranmeldung zum Schutz sensibler Daten
 - Verwaltungstool für den Steckbrief der Verstorbenen
 - Benachrichtigungen für Gedenktage
+- Grabpflege: digitale Kerze anzünden, Blumen ablegen
 - Suchfunktion
 - ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
@@ -27,6 +28,12 @@ Mit Hilfe der Klasse `InformationManager` wird die Verwaltung der Steckbriefe de
 
 #### C NotificationManager
 Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen verantwortlich. Die Funktion `SetReminderMemorialDay` kann für die Erinnerung an Geburtstage, Sterbetage oder andere wichtige Ereignisse verwendet werden.
+
+#### C GraveCare
+
+#### C DigitalCandle
+
+#### C DigitalFlowers
 
 #### C SearchManager
 Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
