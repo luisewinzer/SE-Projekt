@@ -49,10 +49,9 @@ Mit Hilfe der Klasse `DigitalFlowers` können zum Gedenken an die verstorbene Pe
 
 ### Klassendiagramm
 Zur besseren Veranschaung wurde das Klassendiagramm zweigeteilt.
-#### ManagementTools
+
+#### ManagementTools und User
+<img width="853" alt="Bildschirmfoto 2024-06-28 um 20 43 32" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/3c88b13e-5640-4c50-b4ce-83d7536a42bb">
 
 #### Graveyard
 <img width="893" alt="Bildschirmfoto 2024-06-28 um 20 40 56" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/aad49fc9-edaf-412d-80f2-5c435f1472ea">
-
-
-
