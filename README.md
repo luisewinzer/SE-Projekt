@@ -20,6 +20,8 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 #### C User
 In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `Username` und `Password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
 
+---
+
 #### C ManagementTools
 Die Elternklasse `ManagementTools` beinhaltet die Klassen rund um die Verwaltung: `InformationManager`, `NotificationManager` und `SearchManager`.
 
@@ -31,6 +33,8 @@ Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen v
 
 #### C SearchManager
 Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
+
+---
 
 #### C Graveyard
 Die Elternklasse `Graveyard` beinhaltet die Klassen rund um die Pflege des Grabsteins: `Gravestone`, `GraveCare`, `DigitalFlowers` und `Digital Candle`.
@@ -46,6 +50,8 @@ Mit Hilfe der Klasse `DigitalCandle` kann zum Gedenken an die verstorbene Person
 
 #### C DigitalFlowers
 Mit Hilfe der Klasse `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
+
+---
 
 ### Klassendiagramm
 Zur besseren Veranschaung wurde das Klassendiagramm zweigeteilt.
