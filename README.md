@@ -54,7 +54,7 @@ Mit Hilfe der Klasse `DigitalFlowers` können zum Gedenken an die verstorbene Pe
 ---
 
 ### Klassendiagramm
-Zur besseren Veranschaung wurde das Klassendiagramm zweigeteilt.
+Zur besseren Veranschauung wurde das Klassendiagramm zweigeteilt.
 
 #### ManagementTools und User
 <img width="853" alt="Bildschirmfoto 2024-06-28 um 20 43 32" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/3c88b13e-5640-4c50-b4ce-83d7536a42bb">
