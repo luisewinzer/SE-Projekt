@@ -2,7 +2,7 @@
 ## Der digitale Friedhof _Coffin Chronicles_ in C#
 
 ### Kurzbeschreibung
-Es wird eine GUI in C# erstellt, die den Grundriss eines Friedhofs darstellt und veschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereitstellt. Die GUI wird für Friedhofsbesucher und Angehörige der Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
+Es wird eine GUI in C# erstellt, die einen Friedhof simuliert und veschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereitstellt. Die GUI wird für Friedhofsbesucher und Angehörige der Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
 
 <img width="700" alt="Bildschirmfoto 2024-06-28 um 16 46 04" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/fba8f5f8-8d28-48ae-8a01-735003ecd60f">
 
@@ -10,8 +10,23 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 
 ### Funktionalitäten
 - Benutzeranmeldung zum Schutz sensibler Daten
-- Verwaltungstool (erstellen eines Grabsteins, einfügen/entfernen von Informationen, usw.)
+- Verwaltungstool für den Steckbrief der Verstorbenen
 - Benachrichtigungen für Gedenktage
 - Suchfunktion
 - ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
+### Beschreibung der Klassen
+#### C User
+In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `username` und `password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
+
+#### C GraveStone
+Die Klasse `GraveStone` ist für Verwaltung der Grabsteine verantwortlich und zeigt den Namen `name`, den Geburtstag `birthdate`und den Sterbetag `deathdate` an. Es kann ein Grabstein mit `CreateGraveStone` erstellt werden und mit `DeleteGraveStone` entfernt werden.
+
+#### C InformationManager
+Mit Hilfe der Klasse `InformationManager` wird die Verwaltung der Steckbriefe der Personen bewerkstelligt. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden. Fotos von den Verstorbenen können mit `AddPicture` eingefügt und mit `DeletePicture` entfernt werden.
+
+#### C NotificationManager
+Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen verantwortlich. Die Funktion `SetReminderMemorialDay` kann für die Erinnerung an Geburtstage, Sterbetage oder andere wichtige Ereignisse verwendet werden.
+
+#### C SearchManager
+Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
