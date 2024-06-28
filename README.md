@@ -17,8 +17,6 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 - ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
 ### Beschreibung der Klassen
-#### C Graveyard
-In der Elternklasse `Graveyard` werden die anderen Klassen verwaltet/aufgerufen.
 
 #### C User
 In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `username` und `password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
