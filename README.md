@@ -48,4 +48,11 @@ Mit Hilfe der Klasse `DigitalCandle` kann zum Gedenken an die verstorbene Person
 Mit Hilfe der Klasse `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
 
 ### Klassendiagramm
-// hier einfügen
+Zur besseren Veranschaung wurde das Klassendiagramm zweigeteilt.
+#### ManagementTools
+
+#### Graveyard
+<img width="893" alt="Bildschirmfoto 2024-06-28 um 20 40 56" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/aad49fc9-edaf-412d-80f2-5c435f1472ea">
+
+
+
