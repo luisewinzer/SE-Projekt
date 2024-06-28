@@ -1,0 +1,66 @@
+@startuml
+class User{
++ CreateUser(username: string, password: string): void
++ CheckCredentials(username: string, password: string): bool
++ Login(): void
++ Logout(): void
+}
+
+class ManagementTools{
+- InformationManager
+- NotificationManager
+- SearchManager
+}
+
+class InformationManager{
++ AddInformation(person: Person, information: string): void
++ DeleteInformation(person: Person, information: string): void
++ AddPicture(person: Person, picture: Image): void
++ DeletePicture(person: Person, picture: Image): void
+}
+InformationManager ---|> ManagementTools
+
+class NotificationManager{
++ SetReminderMemorialDay(date: DateTime, event: string): void
+}
+NotificationManager ---|> ManagementTools
+
+class SearchManager{
++ SearchForDeceased(name: string): Person
+}
+SearchManager ---|> ManagementTools
+
+class Graveyard{
+- GraveStone
+- GraveCare
+- DigitalFlowers
+- DigitalCandle
+}
+
+class GraveStone{
+- name: string
+- birthdate: DateTime
+- deathdate: DateTime
++ CreateGraveStone(name: string, birthdate: DateTime, deathdate: DateTime): void
++ DeleteGraveStone(graveStone: GraveStone): void
+}
+GraveStone --|> Graveyard
+
+class GraveCare{
+- DigitalCandle
+- DigitalFlowers
+}
+GraveCare --|> Graveyard
+
+class DigitalCandle{
++ LightCandle(): void
++ RemoveCandle(): void
+}
+DigitalCandle --|> GraveCare
+
+class DigitalFlowers{
++ AddFlowers(): void
++ RemoveFlowers(): void
+}
+DigitalFlowers --|> GraveCare
+@enduml
