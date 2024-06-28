@@ -8,6 +8,8 @@ Es wird eine GUI in C# erstellt, die einen Friedhof simuliert und veschiedene Fu
 
 Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereiche. Auf der rechten Seite ist ein Grundriss des Friedhofs abgebildet, der vier beschriftete Grabsteine zeigt. Der zweite Grabstein ist beispielhaft ausgewählt und entsprechend grün markiert. Durch die Auswahl des Grabsteins öffnet sich auf der linken Seite ein zugehöriges Fenster mit Informationen zu der verstorbenen Person. Hier können individuell Bilder, lustige Anekdoten und andere Informationen von den Angehörigen eingefügt werden.
 
+---
+
 ### Funktionalitäten
 - Benutzeranmeldung zum Schutz sensibler Daten
 - Verwaltungstool für den Steckbrief der Verstorbenen
@@ -15,6 +17,8 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 - Grabpflege: digitale Kerze anzünden, Blumen ablegen
 - Suchfunktion nach verstorbenen Personen
 - ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
+
+---
 
 ### Beschreibung der Klassen
 #### C User
