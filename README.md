@@ -17,6 +17,9 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 - ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
 ### Beschreibung der Klassen
+#### C Graveyard
+In der Elternklasse `Graveyard` werden die anderen Klassen verwaltet/aufgerufen.
+
 #### C User
 In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `username` und `password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
 
@@ -30,10 +33,13 @@ Mit Hilfe der Klasse `InformationManager` wird die Verwaltung der Steckbriefe de
 Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen verantwortlich. Die Funktion `SetReminderMemorialDay` kann für die Erinnerung an Geburtstage, Sterbetage oder andere wichtige Ereignisse verwendet werden.
 
 #### C GraveCare
+Die Klasse `GraveCare` beinhaltet die beiden Klassen `DigitalCandle` und `DigitalFlowers` und kann ggf. durch weitere Funktionen ergänzt werden.
 
 #### C DigitalCandle
+Mit Hilfe der Klasse `DigitalCandle` kann zum Gedenken an die verstorbene Person eine Kerze mit `LightCandle` angezündet werden. Diese kann auch wieder mit `RemoveCandle` entfernt werden.
 
 #### C DigitalFlowers
+Mit Hilfe der Klasse `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
 
 #### C SearchManager
 Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
