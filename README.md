@@ -22,7 +22,7 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 
 ### Beschreibung der Klassen
 #### C User
-In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `Username` und `Password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
+In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `username` und `password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
 
 #### C ManagementTools
 Die Elternklasse `ManagementTools` beinhaltet die Klassen rund um die Verwaltung: `InformationManager`, `NotificationManager` und `SearchManager`.
