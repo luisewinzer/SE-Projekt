@@ -42,5 +42,6 @@ Die Klasse `GraveCare` beinhaltet die beiden Funktionen `DigitalCandle` und `Dig
 ---
 
 ### Klassendiagramm
-<img width="854" alt="Bildschirmfoto 2024-06-29 um 10 35 38" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/3a85c9d5-081d-4b3f-b559-73d2daa6570f">
+<img width="1401" alt="Bildschirmfoto 2024-06-29 um 10 37 21" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/f2f7cc8d-e33e-40f3-8212-511f6ad38b45">
 
+---
