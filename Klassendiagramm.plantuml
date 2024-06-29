@@ -16,6 +16,7 @@ class DeceasedPerson{
 - picture: Image
 + AddInformation(person: Person, information: string): void
 + DeleteInformation(person: Person, information: string): void
+}
 
 class NotificationManager{
 + SetReminderMemorialDay(date: DateTime): void
