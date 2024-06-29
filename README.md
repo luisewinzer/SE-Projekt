@@ -14,8 +14,8 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 - Benutzeranmeldung zum Schutz sensibler Daten
 - Verwaltungstool für den Steckbrief der Verstorbenen
 - Benachrichtigungen für Gedenktage
-- Grabpflege: digitale Kerze anzünden, Blumen ablegen
 - Suchfunktion nach verstorbenen Personen
+- (Grabpflege: digitale Kerze anzünden, Blumen ablegen)
 - ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
 ---
@@ -36,10 +36,11 @@ Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen
 #### C GraveStone
 Die Klasse `GraveStone` ist für Verwaltung der Grabsteine verantwortlich und zeigt den Namen `name`, den Geburtstag `birthdate` und den Sterbetag `deathdate` an. Es kann ein Grabstein mit `CreateGraveStone` erstellt werden und mit `DeleteGraveStone` entfernt werden.
 
-#### C GraveCare
+#### (C GraveCare)
 Die Klasse `GraveCare` beinhaltet die beiden Funktionen `DigitalCandle` und `DigitalFlowers` und kann ggf. durch weitere Funktionen ergänzt werden. Mit Hilfe von `DigitalCandle` kann zum Gedenken an die verstorbene Person eine Kerze mit `AddCandle` angezündet werden. Diese kann auch wieder mit `RemoveCandle` entfernt werden. Mit Hilfe von `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
 
 ---
 
 ### Klassendiagramm
+<img width="854" alt="Bildschirmfoto 2024-06-29 um 10 35 38" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/3a85c9d5-081d-4b3f-b559-73d2daa6570f">
 
