@@ -24,11 +24,8 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 #### C User
 In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `username` und `password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
 
-#### C ManagementTools
-Die Elternklasse `ManagementTools` beinhaltet die Klassen rund um die Verwaltung: `InformationManager`, `NotificationManager` und `SearchManager`.
-
-#### C InformationManager
-Mit Hilfe der Klasse `InformationManager` wird die Verwaltung der Steckbriefe der Personen bewerkstelligt. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden. Fotos von den Verstorbenen können mit `AddPicture` eingefügt und mit `DeletePicture` entfernt werden.
+#### C DeceasedPerson
+Mit Hilfe der Klasse `DeceasedPerson` werden die Daten (`name`, `birthdate`, `deathdate`, `furtherInformation` und `picture`) über die verstorbene Person erfasst. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden.
 
 #### C NotificationManager
 Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen verantwortlich. Die Funktion `SetReminderMemorialDay` kann für die Erinnerung an Geburtstage, Sterbetage oder andere wichtige Ereignisse verwendet werden.
@@ -36,29 +33,13 @@ Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen v
 #### C SearchManager
 Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
 
-#### C Graveyard
-Die Elternklasse `Graveyard` beinhaltet die Klassen rund um die Pflege des Grabsteins: `Gravestone`, `GraveCare`, `DigitalFlowers` und `Digital Candle`.
-
 #### C GraveStone
-Die Klasse `GraveStone` ist für Verwaltung der Grabsteine verantwortlich und zeigt den Namen `name`, den Geburtstag `birthdate`und den Sterbetag `deathdate` an. Es kann ein Grabstein mit `CreateGraveStone` erstellt werden und mit `DeleteGraveStone` entfernt werden.
+Die Klasse `GraveStone` ist für Verwaltung der Grabsteine verantwortlich und zeigt den Namen `name`, den Geburtstag `birthdate` und den Sterbetag `deathdate` an. Es kann ein Grabstein mit `CreateGraveStone` erstellt werden und mit `DeleteGraveStone` entfernt werden.
 
 #### C GraveCare
-Die Klasse `GraveCare` beinhaltet die beiden Klassen `DigitalCandle` und `DigitalFlowers` und kann ggf. durch weitere Funktionen ergänzt werden.
-
-#### C DigitalCandle
-Mit Hilfe der Klasse `DigitalCandle` kann zum Gedenken an die verstorbene Person eine Kerze mit `LightCandle` angezündet werden. Diese kann auch wieder mit `RemoveCandle` entfernt werden.
-
-#### C DigitalFlowers
-Mit Hilfe der Klasse `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
+Die Klasse `GraveCare` beinhaltet die beiden Funktionen `DigitalCandle` und `DigitalFlowers` und kann ggf. durch weitere Funktionen ergänzt werden. Mit Hilfe von `DigitalCandle` kann zum Gedenken an die verstorbene Person eine Kerze mit `AddCandle` angezündet werden. Diese kann auch wieder mit `RemoveCandle` entfernt werden. Mit Hilfe von `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
 
 ---
 
 ### Klassendiagramm
-Zur besseren Veranschauung wurde das Klassendiagramm zweigeteilt.
-
-#### ManagementTools und User
-<img width="853" alt="Bildschirmfoto 2024-06-28 um 20 43 32" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/3c88b13e-5640-4c50-b4ce-83d7536a42bb">
-
-#### Graveyard
-<img width="893" alt="Bildschirmfoto 2024-06-28 um 20 40 56" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/aad49fc9-edaf-412d-80f2-5c435f1472ea">
 
