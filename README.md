@@ -13,8 +13,8 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 ### Funktionalitäten
 - Benutzeranmeldung zum Schutz sensibler Daten
 - Verwaltungstool für den Steckbrief der Verstorbenen
-- Benachrichtigungen für Gedenktage
-- Suchfunktion nach verstorbenen Personen
+- (Benachrichtigungen für Gedenktage)
+- (Suchfunktion nach verstorbenen Personen)
 - (Grabpflege: digitale Kerze anzünden, Blumen ablegen)
 - ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
