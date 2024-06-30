@@ -13,10 +13,11 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 ### Funktionalitäten
 - Benutzeranmeldung zum Schutz sensibler Daten
 - Verwaltungstool für den Steckbrief der Verstorbenen
-- (Benachrichtigungen für Gedenktage)
-- (Suchfunktion nach verstorbenen Personen)
-- (Grabpflege: digitale Kerze anzünden, Blumen ablegen)
-- ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
+- (Benachrichtigungen für Gedenktage)*
+- (Suchfunktion nach verstorbenen Personen)*
+- (Grabpflege: digitale Kerze anzünden, Blumen ablegen)*
+
+`*` diese und ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
 ---
 
@@ -27,14 +28,14 @@ In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, 
 #### C DeceasedPerson
 Mit Hilfe der Klasse `DeceasedPerson` werden die Daten (`name`, `birthdate`, `deathdate`, `furtherInformation` und `picture`) über die verstorbene Person erfasst. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden.
 
-#### C NotificationManager
-Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen verantwortlich. Die Funktion `SetReminderMemorialDay` kann für die Erinnerung an Geburtstage, Sterbetage oder andere wichtige Ereignisse verwendet werden.
-
-#### C SearchManager
-Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
-
 #### C GraveStone
 Die Klasse `GraveStone` ist für Verwaltung der Grabsteine verantwortlich und zeigt den Namen `name`, den Geburtstag `birthdate` und den Sterbetag `deathdate` an. Es kann ein Grabstein mit `CreateGraveStone` erstellt werden und mit `DeleteGraveStone` entfernt werden.
+
+#### (C NotificationManager)
+Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen verantwortlich. Die Funktion `SetReminderMemorialDay` kann für die Erinnerung an Geburtstage, Sterbetage oder andere wichtige Ereignisse verwendet werden.
+
+#### (C SearchManager)
+Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
 
 #### (C GraveCare)
 Die Klasse `GraveCare` beinhaltet die beiden Funktionen `DigitalCandle` und `DigitalFlowers` und kann ggf. durch weitere Funktionen ergänzt werden. Mit Hilfe von `DigitalCandle` kann zum Gedenken an die verstorbene Person eine Kerze mit `AddCandle` angezündet werden. Diese kann auch wieder mit `RemoveCandle` entfernt werden. Mit Hilfe von `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
