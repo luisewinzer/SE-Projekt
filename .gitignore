@@ -1,0 +1,11 @@
+*.pdf
+*.dll
+*.exe
+a.out
+*.out
+*.mdx
+
+output/
+bin/
+obj/
+.vscode/
