@@ -1,5 +1,5 @@
 # Projekt Softwareentwicklung
-## Der digitale Friedhof _Coffin Chronicles_ in C#
+## Digital Cemetery _Coffin Chronicles_
 
 ### Kurzbeschreibung
 Es wird eine GUI in C# erstellt, die einen Friedhof simuliert und veschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereitstellt. Die GUI wird für Friedhofsbesucher und Angehörige der Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
