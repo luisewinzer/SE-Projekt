@@ -4,8 +4,11 @@
 a.out
 *.out
 *.mdx
+*.vsidx
+
 
 output/
 bin/
 obj/
 .vscode/
+.vs/
