@@ -19,16 +19,42 @@ namespace L_R_Screen
         public frmRegistration()
         {
             InitializeComponent();
-            string databasePath = ExtractDatabaseFile("L_R_Screen.db_users.mdb"); // Anpassung des Ressourcennamens
+            string databasePath = ExtractDatabaseFile("L_R_Screen.db_users.mdb"); 
             string connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={databasePath};";
             con = new OleDbConnection(connectionString);
         }
 
-        //OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
 
         private string ExtractDatabaseFile(string resourceName)
+        {
+            string outputPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db_users.mdb");
+
+            if (!File.Exists(outputPath))
+            {
+                using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+                {
+                    if (stream == null)
+                    {
+                        throw new Exception($"Resource '{resourceName}' not found.");
+                    }
+
+                    using (FileStream fileStream = new FileStream(outputPath, FileMode.Create, FileAccess.Write))
+                    {
+                        stream.CopyTo(fileStream);
+                    }
+                }
+            }
+
+            // Debug-Ausgabe für den Pfad der extrahierten Datenbank
+            MessageBox.Show("Datenbankpfad: " + outputPath);
+
+            return outputPath;
+        }
+
+
+        /*private string ExtractDatabaseFile(string resourceName)
         {
             string tempPath = Path.GetTempPath();
             string databasePath = Path.Combine(tempPath, "db_users.mdb");
@@ -47,7 +73,7 @@ namespace L_R_Screen
             }
 
             return databasePath;
-        }
+        }*/
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
@@ -60,11 +86,39 @@ namespace L_R_Screen
                 try
                 {
                     con.Open();
-                    string register = "INSERT INTO tbl_users (username, password) VALUES (?, ?)";
+                    MessageBox.Show("Datenbankpfad: " + con.DataSource);
+
+
+                    /*cmd.Parameters.Add(new OleDbParameter("@username", txtUsername.Text));
+                    cmd.Parameters.Add(new OleDbParameter("@password", txtPassword.Text));
+
+                    string query = $"INSERT INTO tbl_users ([username], [password]) VALUES ('{txtUsername.Text}', '{txtPassword.Text}')";
+                    MessageBox.Show(query);
+
+
+                    //SQL Abfrage zum anlegen eines Benutzers
+                    string register = "INSERT INTO tbl_users ([username], [password]) VALUES ('testuser', 'testpassword')";
                     cmd = new OleDbCommand(register, con);
-                    cmd.Parameters.AddWithValue("?", txtUsername.Text);
-                    cmd.Parameters.AddWithValue("?", txtPassword.Text);
+
+                    MessageBox.Show($"Executing query: INSERT INTO tbl_users ([username], [password]) VALUES ('{txtUsername.Text}', '{txtPassword.Text}')");
+                    int result1 = cmd.ExecuteNonQuery();
+                    MessageBox.Show($"Number of rows affected: {result1}");
+
                     cmd.ExecuteNonQuery();
+
+                    MessageBox.Show($"Executing query: INSERT INTO tbl_users ([username], [password]) VALUES ('{txtUsername.Text}', '{txtPassword.Text}')");
+                    int result2 = cmd.ExecuteNonQuery();
+                    MessageBox.Show($"Number of rows affected: {result2}");*/
+
+                    string testQuery = "SELECT * FROM tbl_users";
+                    OleDbCommand testCmd = new OleDbCommand(testQuery, con);
+                    OleDbDataReader reader = testCmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        MessageBox.Show("Verbindung erfolgreich und Daten vorhanden");
+                    }
+                    reader.Close();
+
 
                     MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
