@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeceasedPerson.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +101,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IconCC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="db_users.mdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

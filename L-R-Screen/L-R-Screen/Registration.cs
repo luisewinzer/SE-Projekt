@@ -8,19 +8,46 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
+using System.Reflection;
 
 namespace L_R_Screen
 {
     public partial class frmRegistration : Form
     {
+        private OleDbConnection con;
         public frmRegistration()
         {
             InitializeComponent();
+            string databasePath = ExtractDatabaseFile("L_R_Screen.db_users.mdb"); // Anpassung des Ressourcennamens
+            string connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={databasePath};";
+            con = new OleDbConnection(connectionString);
         }
 
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
+        //OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
+
+        private string ExtractDatabaseFile(string resourceName)
+        {
+            string tempPath = Path.GetTempPath();
+            string databasePath = Path.Combine(tempPath, "db_users.mdb");
+
+            using (Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+            {
+                if (resourceStream == null)
+                {
+                    throw new Exception($"Ressource '{resourceName}' wurde nicht gefunden.");
+                }
+
+                using (FileStream fileStream = new FileStream(databasePath, FileMode.Create, FileAccess.Write))
+                {
+                    resourceStream.CopyTo(fileStream);
+                }
+            }
+
+            return databasePath;
+        }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
@@ -30,17 +57,33 @@ namespace L_R_Screen
             }
             else if (txtPassword.Text == txtConPassword.Text)
             {
-                con.Open();
-                string register = "INSERT INTO tbl.users VALUES ('" + txtUsername.Text + "', '" + txtPassword.Text + "')";
-                cmd = new OleDbCommand(register, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                try
+                {
+                    con.Open();
+                    string register = "INSERT INTO tbl_users (username, password) VALUES (?, ?)";
+                    cmd = new OleDbCommand(register, con);
+                    cmd.Parameters.AddWithValue("?", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("?", txtPassword.Text);
+                    cmd.ExecuteNonQuery();
 
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtConPassword.Text = "";
+                    MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Textfelder leeren
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtConPassword.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fehler: " + ex.Message);
+                }
+                finally
+                {
+                    if (con != null && con.State == ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
+                }
             }
             else
             {
