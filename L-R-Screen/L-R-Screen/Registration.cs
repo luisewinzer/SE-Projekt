@@ -15,65 +15,13 @@ namespace L_R_Screen
 {
     public partial class frmRegistration : Form
     {
-        private OleDbConnection con;
         public frmRegistration()
         {
             InitializeComponent();
-            string databasePath = ExtractDatabaseFile("L_R_Screen.db_users.mdb"); 
-            string connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={databasePath};";
-            con = new OleDbConnection(connectionString);
+            
         }
 
-        OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
-
-        private string ExtractDatabaseFile(string resourceName)
-        {
-            string outputPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db_users.mdb");
-
-            if (!File.Exists(outputPath))
-            {
-                using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
-                {
-                    if (stream == null)
-                    {
-                        throw new Exception($"Resource '{resourceName}' not found.");
-                    }
-
-                    using (FileStream fileStream = new FileStream(outputPath, FileMode.Create, FileAccess.Write))
-                    {
-                        stream.CopyTo(fileStream);
-                    }
-                }
-            }
-
-            // Debug-Ausgabe für den Pfad der extrahierten Datenbank
-            MessageBox.Show("Datenbankpfad: " + outputPath);
-
-            return outputPath;
-        }
-
-
-        /*private string ExtractDatabaseFile(string resourceName)
-        {
-            string tempPath = Path.GetTempPath();
-            string databasePath = Path.Combine(tempPath, "db_users.mdb");
-
-            using (Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
-            {
-                if (resourceStream == null)
-                {
-                    throw new Exception($"Ressource '{resourceName}' wurde nicht gefunden.");
-                }
-
-                using (FileStream fileStream = new FileStream(databasePath, FileMode.Create, FileAccess.Write))
-                {
-                    resourceStream.CopyTo(fileStream);
-                }
-            }
-
-            return databasePath;
-        }*/
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
@@ -85,47 +33,24 @@ namespace L_R_Screen
             {
                 try
                 {
-                    con.Open();
-                    MessageBox.Show("Datenbankpfad: " + con.DataSource);
+                    Database.OpenConnection();
 
+                    string register = "INSERT INTO tbl_users ([username], [password]) VALUES (?, ?)";
 
-                    /*cmd.Parameters.Add(new OleDbParameter("@username", txtUsername.Text));
-                    cmd.Parameters.Add(new OleDbParameter("@password", txtPassword.Text));
-
-                    string query = $"INSERT INTO tbl_users ([username], [password]) VALUES ('{txtUsername.Text}', '{txtPassword.Text}')";
-                    MessageBox.Show(query);
-
-
-                    //SQL Abfrage zum anlegen eines Benutzers
-                    string register = "INSERT INTO tbl_users ([username], [password]) VALUES ('testuser', 'testpassword')";
-                    cmd = new OleDbCommand(register, con);
-
-                    MessageBox.Show($"Executing query: INSERT INTO tbl_users ([username], [password]) VALUES ('{txtUsername.Text}', '{txtPassword.Text}')");
-                    int result1 = cmd.ExecuteNonQuery();
-                    MessageBox.Show($"Number of rows affected: {result1}");
-
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show($"Executing query: INSERT INTO tbl_users ([username], [password]) VALUES ('{txtUsername.Text}', '{txtPassword.Text}')");
-                    int result2 = cmd.ExecuteNonQuery();
-                    MessageBox.Show($"Number of rows affected: {result2}");*/
-
-                    string testQuery = "SELECT * FROM tbl_users";
-                    OleDbCommand testCmd = new OleDbCommand(testQuery, con);
-                    OleDbDataReader reader = testCmd.ExecuteReader();
-                    if (reader.HasRows)
+                    using (OleDbCommand cmd = new OleDbCommand(register, Database.Connection))
                     {
-                        MessageBox.Show("Verbindung erfolgreich und Daten vorhanden");
+                        cmd.Parameters.AddWithValue("?", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("?", txtPassword.Text);
+                        cmd.ExecuteNonQuery();
                     }
-                    reader.Close();
 
+                    Database.CloseConnection();
 
-                    MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Textfelder leeren
                     txtUsername.Text = "";
                     txtPassword.Text = "";
                     txtConPassword.Text = "";
+
+                    MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
@@ -133,10 +58,7 @@ namespace L_R_Screen
                 }
                 finally
                 {
-                    if (con != null && con.State == ConnectionState.Open)
-                    {
-                        con.Close();
-                    }
+                    Database.CloseConnection();
                 }
             }
             else

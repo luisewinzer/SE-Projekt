@@ -15,77 +15,57 @@ namespace L_R_Screen
 {
     public partial class frmLogin : Form
     {
-        private OleDbConnection con;
         public frmLogin()
         {
             InitializeComponent();
-            string databasePath = ExtractDatabaseFile("L_R_Screen.db_users.mdb"); 
-            string connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={databasePath};";
-            con = new OleDbConnection(connectionString);
+            
         }
 
-        OleDbCommand cmd = new OleDbCommand();
+        //OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
-
-        private string ExtractDatabaseFile(string resourceName)
-        {   
-            string tempPath = Path.GetTempPath();
-            string databasePath = Path.Combine(tempPath, "db_users.mdb");
-
-            using (Stream resourceStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
-            {
-                if (resourceStream == null)
-                {
-                    throw new Exception($"Ressource '{resourceName}' wurde nicht gefunden.");
-                }
-
-                using (FileStream fileStream = new FileStream(databasePath, FileMode.Create, FileAccess.Write))
-                {
-                    resourceStream.CopyTo(fileStream);
-                }
-            }
-
-            return databasePath;
-        }
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
+            try 
+            { 
+                Database.OpenConnection();
+
                 // SQL abfrage zum ermitteln der benutzer daten
                 string login = "SELECT * FROM tbl_users WHERE username = ? AND password = ?";
-                cmd = new OleDbCommand(login, con);
-                cmd.Parameters.AddWithValue("?", txtUsername.Text);
-                cmd.Parameters.AddWithValue("?", txtPassword.Text);
 
-                OleDbDataReader dr = cmd.ExecuteReader();
+                using (OleDbCommand cmd = new OleDbCommand(login, Database.Connection))
+                {
+                    cmd.Parameters.AddWithValue("?", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("?", txtPassword.Text);
 
-                if (dr.Read() == true)
-                {
-                    new frmMainPage().Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Benutzername oder Passwort ungültig", "Login fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtUsername.Text = "";
-                    txtPassword.Text = "";
-                    txtUsername.Focus();
-                }
+                    using (OleDbDataReader dr = cmd.ExecuteReader())
+                    {
+
+                        if (dr.Read() == true)
+                        {
+                            new frmMainPage().Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Benutzername oder Passwort ungültig", "Login fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            txtUsername.Text = "";
+                            txtPassword.Text = "";
+                            txtUsername.Focus();
+                        }
+                    }
+                } 
             }
-            catch (Exception ex)
+            catch(Exception ex) 
             {
                 MessageBox.Show("Fehler: " + ex.Message);
             }
-            finally
-            {
-                if (con != null && con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
+            finally 
+            { 
+                Database.CloseConnection(); 
             }
-                    }
+        }
+    
 
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
