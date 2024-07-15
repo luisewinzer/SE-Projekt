@@ -21,8 +21,6 @@ namespace L_R_Screen
             
         }
 
-        OleDbDataAdapter da = new OleDbDataAdapter();
-
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "" && txtPassword.Text == "" && txtConPassword.Text == "")
@@ -34,6 +32,8 @@ namespace L_R_Screen
                 try
                 {
                     Database.OpenConnection();
+
+                    //Legt neuen Nutzer in der Datenbank db_users.mdb an
 
                     string register = "INSERT INTO tbl_users ([username], [password]) VALUES (?, ?)";
 
@@ -51,6 +51,10 @@ namespace L_R_Screen
                     txtConPassword.Text = "";
 
                     MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Öffnet die LoginPage
+                    new frmLogin().Show();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
@@ -86,6 +90,7 @@ namespace L_R_Screen
 
         private void labelBackToLogin_Click(object sender, EventArgs e)
         {
+            //Öffnet die LoginPage
             new frmLogin().Show();
             this.Hide();
         }

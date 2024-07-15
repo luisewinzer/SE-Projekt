@@ -25,7 +25,8 @@ namespace L_R_Screen
             try
             {
                 Database.OpenConnection();
-                // Beispiel für eine Datenbankoperation in Main
+
+                // Beispiel für eine Datenbankoperation fürs Debuggen
                 string query = "SELECT COUNT(*) FROM tbl_users";
                 using (OleDbCommand cmd = new OleDbCommand(query, Database.Connection))
                 {

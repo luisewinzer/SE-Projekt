@@ -21,9 +21,6 @@ namespace L_R_Screen
             
         }
 
-        //OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             try 
@@ -43,6 +40,7 @@ namespace L_R_Screen
 
                         if (dr.Read() == true)
                         {
+                            //Öffnet die MainPage
                             new frmMainPage().Show();
                             this.Hide();
                         }
@@ -81,6 +79,7 @@ namespace L_R_Screen
 
         private void labelCreateAccount_Click(object sender, EventArgs e)
         {
+            //Öffnet die RegistrationPage
             new frmRegistration().Show();
             this.Hide();
         }
