@@ -16,7 +16,7 @@ namespace L_R_Screen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistration());
+            Application.Run(new frmLogin());
         }
     }
 }
