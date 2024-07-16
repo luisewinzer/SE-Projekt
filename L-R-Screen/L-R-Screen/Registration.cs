@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
 using System.Reflection;
+using Microsoft.Win32;
 
 namespace L_R_Screen
 {
@@ -33,21 +34,27 @@ namespace L_R_Screen
             }
             else if (txtPassword.Text == txtConPassword.Text)
             {
-                Database.OpenConnection();
+                try { 
 
-                 // Überprüfung, ob Benutzername bereits existiert
+                    Database.OpenConnection();
+
+                    // Überprüfung, ob Benutzername bereits existiert
                     string checkUser = "SELECT COUNT(*) FROM [tbl_users] WHERE [username] = ?";
-                    cmd = new OleDbCommand(checkUser, con);
-                    cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                    int userCount = (int)cmd.ExecuteScalar();
+                    using (OleDbCommand cmd = new OleDbCommand(checkUser, Database.Connection))
+                    {
+
+                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                        int userCount = (int)cmd.ExecuteScalar();
+                
 
                     if (userCount > 0)
                     {
                         MessageBox.Show("Benutzername existiert bereits", "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Database.CloseConnection();
                     }
-                // SQL-Insert-Befehl, um neuen Benutzer hinzuzufügen
-                    string register = "INSERT INTO [tbl_users] ([username], [password]) VALUES (?, ?)";                    
+                    }
+                    // SQL-Insert-Befehl, um neuen Benutzer hinzuzufügen
+                    string register = "INSERT INTO [tbl_users] ([username], [password]) VALUES (?, ?)";
 
                     using (OleDbCommand cmd = new OleDbCommand(register, Database.Connection))
                     {
@@ -56,19 +63,19 @@ namespace L_R_Screen
                         cmd.ExecuteNonQuery();
                     }
 
-                Database.CloseConnection();
+                    Database.CloseConnection();
 
                     // Zurücksetzen der Eingabefelder
                     txtUsername.Text = "";
                     txtPassword.Text = "";
                     txtConPassword.Text = "";
 
-                        MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //Öffnet die LoginPage
                     new frmLogin().Show();
                     this.Hide();
-                }
+                }        
                 catch (Exception ex)
                 {
                     MessageBox.Show("Fehler: " + ex.Message, "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -86,6 +93,7 @@ namespace L_R_Screen
                 txtPassword.Focus();
             }
         }
+
 
         // Event-Handler für die Checkbox zum Anzeigen/Verbergen des Passworts
         private void showPassword_CheckedChanged(object sender, EventArgs e)
