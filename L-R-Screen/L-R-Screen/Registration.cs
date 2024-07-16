@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
+using System.Reflection;
 
 namespace L_R_Screen
 {
@@ -16,11 +18,8 @@ namespace L_R_Screen
         public frmRegistration()
         {
             InitializeComponent();
+            
         }
-
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
@@ -30,17 +29,41 @@ namespace L_R_Screen
             }
             else if (txtPassword.Text == txtConPassword.Text)
             {
-                con.Open();
-                string register = "INSERT INTO tbl.users VALUES ('" + txtUsername.Text + "', '" + txtPassword.Text + "')";
-                cmd = new OleDbCommand(register, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                try
+                {
+                    Database.OpenConnection();
 
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtConPassword.Text = "";
+                    //Legt neuen Nutzer in der Datenbank db_users.mdb an
 
-                MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string register = "INSERT INTO tbl_users ([username], [password]) VALUES (?, ?)";
+
+                    using (OleDbCommand cmd = new OleDbCommand(register, Database.Connection))
+                    {
+                        cmd.Parameters.AddWithValue("?", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("?", txtPassword.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    Database.CloseConnection();
+
+                    txtUsername.Text = "";
+                    txtPassword.Text = "";
+                    txtConPassword.Text = "";
+
+                    MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Öffnet die LoginPage
+                    new frmLogin().Show();
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fehler: " + ex.Message);
+                }
+                finally
+                {
+                    Database.CloseConnection();
+                }
             }
             else
             {
@@ -67,6 +90,7 @@ namespace L_R_Screen
 
         private void labelBackToLogin_Click(object sender, EventArgs e)
         {
+            //Öffnet die LoginPage
             new frmLogin().Show();
             this.Hide();
         }

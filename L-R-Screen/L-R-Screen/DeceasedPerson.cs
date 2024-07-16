@@ -1,12 +1,16 @@
 class DeceasedPerson
 {
-    private string name {get; set;}
-    private string furtherInformation {get; set;}
-    private DateTime birthdate = new DateTime():
-    private DateTime deathdate = new DateTime();
+    public string name {get; set;}
+    public string furtherInformation {get; set;}
+    public string birthdate { get; set;}
+    public string deathdate {  get; set;}
 
-    public DeceasedPerson()
+    public DeceasedPerson(string _name,string _furtherInformation,string _birthdate,string _deathdate)
     {
+        name = _name;
+        furtherInformation = _furtherInformation;
+        birthdate = _birthdate;
+        deathdate = _deathdate;
 
     }
 
