@@ -101,6 +101,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="db_users.mdb" />
     <None Include="Resources\IconCC.png" />
   </ItemGroup>
   <ItemGroup>
