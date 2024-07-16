@@ -17,10 +17,8 @@ namespace L_R_Screen
     {
         public frmLogin()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             try 
