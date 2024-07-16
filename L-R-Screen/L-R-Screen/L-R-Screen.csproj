@@ -106,5 +106,8 @@
   <ItemGroup>
     <None Include="Resources\Tombstone.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="db_users.mdb" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
