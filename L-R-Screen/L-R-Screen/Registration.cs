@@ -27,30 +27,43 @@ namespace L_R_Screen
             {
                 MessageBox.Show("Felder für Benutzername und Passwort sind leer", "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (txtPassword.Text.Length < 4 || txtPassword.Text.Length > 12)
+            {
+                MessageBox.Show("Das Passwort muss zwischen 4 und 12 Zeichen lang sein", "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else if (txtPassword.Text == txtConPassword.Text)
             {
-                try
-                {
-                    Database.OpenConnection();
+                Database.OpenConnection();
 
-                    //Legt neuen Nutzer in der Datenbank db_users.mdb an
+                 // Überprüfung, ob Benutzername bereits existiert
+                    string checkUser = "SELECT COUNT(*) FROM [tbl_users] WHERE [username] = ?";
+                    cmd = new OleDbCommand(checkUser, con);
+                    cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                    int userCount = (int)cmd.ExecuteScalar();
 
-                    string register = "INSERT INTO tbl_users ([username], [password]) VALUES (?, ?)";
+                    if (userCount > 0)
+                    {
+                        MessageBox.Show("Benutzername existiert bereits", "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Database.CloseConnection();
+                    }
+                // SQL-Insert-Befehl, um neuen Benutzer hinzuzufügen
+                    string register = "INSERT INTO [tbl_users] ([username], [password]) VALUES (?, ?)";                    
 
                     using (OleDbCommand cmd = new OleDbCommand(register, Database.Connection))
                     {
-                        cmd.Parameters.AddWithValue("?", txtUsername.Text);
-                        cmd.Parameters.AddWithValue("?", txtPassword.Text);
+                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                         cmd.ExecuteNonQuery();
                     }
 
-                    Database.CloseConnection();
+                Database.CloseConnection();
 
+                    // Zurücksetzen der Eingabefelder
                     txtUsername.Text = "";
                     txtPassword.Text = "";
                     txtConPassword.Text = "";
 
-                    MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //Öffnet die LoginPage
                     new frmLogin().Show();
@@ -58,7 +71,7 @@ namespace L_R_Screen
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Fehler: " + ex.Message);
+                    MessageBox.Show("Fehler: " + ex.Message, "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -74,6 +87,7 @@ namespace L_R_Screen
             }
         }
 
+        // Event-Handler für die Checkbox zum Anzeigen/Verbergen des Passworts
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (showPassword.Checked)
