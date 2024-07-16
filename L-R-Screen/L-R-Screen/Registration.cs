@@ -36,11 +36,11 @@ namespace L_R_Screen
             {
                 try { 
 
-                    Database.OpenConnection();
+                    Database.OpenConnection("db_users");
 
                     // Überprüfung, ob Benutzername bereits existiert
                     string checkUser = "SELECT COUNT(*) FROM [tbl_users] WHERE [username] = ?";
-                    using (OleDbCommand cmd = new OleDbCommand(checkUser, Database.Connection))
+                    using (OleDbCommand cmd = new OleDbCommand(checkUser, Database.GetConnection("db_users")))
                     {
 
                         cmd.Parameters.AddWithValue("@username", txtUsername.Text);
@@ -50,20 +50,20 @@ namespace L_R_Screen
                     if (userCount > 0)
                     {
                         MessageBox.Show("Benutzername existiert bereits", "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Database.CloseConnection();
+                        Database.CloseConnection("db_graves");
                     }
                     }
                     // SQL-Insert-Befehl, um neuen Benutzer hinzuzufügen
                     string register = "INSERT INTO [tbl_users] ([username], [password]) VALUES (?, ?)";
 
-                    using (OleDbCommand cmd = new OleDbCommand(register, Database.Connection))
+                    using (OleDbCommand cmd = new OleDbCommand(register, Database.GetConnection("db_users")))
                     {
                         cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                         cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                         cmd.ExecuteNonQuery();
                     }
 
-                    Database.CloseConnection();
+                    Database.CloseConnection("db_graves");
 
                     // Zurücksetzen der Eingabefelder
                     txtUsername.Text = "";
@@ -82,7 +82,7 @@ namespace L_R_Screen
                 }
                 finally
                 {
-                    Database.CloseConnection();
+                    Database.CloseConnection("db_graves");
                 }
             }
             else

@@ -12,24 +12,47 @@ namespace L_R_Screen
 {
     public static class Database
     {
-        private static OleDbConnection connection;
-        public static OleDbConnection Connection 
+        private static Dictionary<string, OleDbConnection> connections = new Dictionary<string, OleDbConnection>();
+
+        public static void OpenConnection(string dbName)
         {
-            get
+            if (!connections.ContainsKey(dbName))
             {
-                if (connection == null)
-                {
-                    string databasePath = ExtractDatabaseFile("L_R_Screen.db_users.mdb");
-                    string connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={databasePath}";
-                    connection = new OleDbConnection(connectionString);
-                }
-                return connection;
+                string databasePath = ExtractDatabaseFile($"L_R_Screen.{dbName}.mdb");
+                string connectionString = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={databasePath}";
+                OleDbConnection connection = new OleDbConnection(connectionString);
+                connection.Open();
+                connections[dbName] = connection;
+            }
+            else if (connections[dbName].State == ConnectionState.Closed)
+            {
+                connections[dbName].Open();
+            }
+        }
+
+        public static void CloseConnection(string dbName)
+        {
+            if (connections.ContainsKey(dbName) && connections[dbName].State == ConnectionState.Open)
+            {
+                connections[dbName].Close();
+            }
+        }
+
+        public static OleDbConnection GetConnection(string dbName)
+        {
+            if (connections.ContainsKey(dbName))
+            {
+                return connections[dbName];
+            }
+            else
+            {
+                throw new InvalidOperationException($"Keine geöffnete Verbindung für '{dbName}' gefunden.");
             }
         }
 
         private static string ExtractDatabaseFile(string resourceName)
         {
-            string outputPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "db_users.mdb");
+            string outputPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, resourceName.Split('.')[1]);
 
             if (!File.Exists(outputPath))
             {
@@ -48,22 +71,6 @@ namespace L_R_Screen
             }
 
             return outputPath;
-        }
-
-        public static void OpenConnection()
-        {
-            if (Connection != null && Connection.State == ConnectionState.Closed)
-            {
-                Connection.Open();
-            }
-        }
-
-        public static void CloseConnection()
-        {
-            if (Connection != null && Connection.State == ConnectionState.Open)
-            {
-                Connection.Close();
-            }
         }
     }
 }

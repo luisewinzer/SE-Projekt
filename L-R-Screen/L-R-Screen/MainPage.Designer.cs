@@ -220,6 +220,7 @@
             this.bEdit.TabIndex = 0;
             this.bEdit.Text = "Edit";
             this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
             // lGraveName1
             // 

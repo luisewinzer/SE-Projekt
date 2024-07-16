@@ -23,12 +23,12 @@ namespace L_R_Screen
         {
             try 
             { 
-                Database.OpenConnection();
+                Database.OpenConnection("db_users");
 
                 // SQL abfrage zum ermitteln der benutzer daten
                 string login = "SELECT * FROM tbl_users WHERE username = ? AND password = ?";
 
-                using (OleDbCommand cmd = new OleDbCommand(login, Database.Connection))
+                using (OleDbCommand cmd = new OleDbCommand(login, Database.GetConnection("db_users")))
                 {
                     cmd.Parameters.AddWithValue("?", txtUsername.Text);
                     cmd.Parameters.AddWithValue("?", txtPassword.Text);
@@ -58,7 +58,7 @@ namespace L_R_Screen
             }
             finally 
             { 
-                Database.CloseConnection(); 
+                Database.CloseConnection("db_users"); 
             }
         }
 
