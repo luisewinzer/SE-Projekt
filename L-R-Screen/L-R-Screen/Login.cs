@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
+using System.Reflection;
 
 namespace L_R_Screen
 {
@@ -16,46 +18,49 @@ namespace L_R_Screen
         public frmLogin()
         {
             InitializeComponent();
+            
         }
-
-        // Verbindungsobjekt zur Datenbank
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
+            try 
+            { 
+                Database.OpenConnection();
 
-                // SQL-Select-Befehl zum Überprüfen der Benutzerdaten
-                string login = "SELECT * FROM [tbl_users] WHERE [username] = ? AND [password] = ?";
-                cmd = new OleDbCommand(login, con);
-                cmd.Parameters.AddWithValue("@username", txtUsername.Text);
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                OleDbDataReader dr = cmd.ExecuteReader();
+                // SQL abfrage zum ermitteln der benutzer daten
+                string login = "SELECT * FROM tbl_users WHERE username = ? AND password = ?";
 
-                if (dr.Read())
+                using (OleDbCommand cmd = new OleDbCommand(login, Database.Connection))
                 {
-                    new frmMainPage().Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Benutzername oder Passwort ungültig", "Login fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtUsername.Text = "";
-                    txtPassword.Text = "";
-                    txtUsername.Focus();
-                }
+                    cmd.Parameters.AddWithValue("?", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("?", txtPassword.Text);
 
-                dr.Close();
-                con.Close();
+                    using (OleDbDataReader dr = cmd.ExecuteReader())
+                    {
+
+                            if (dr.Read() == true)
+                            {
+                                //Öffnet die MainPage
+                                new frmMainPage().Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Benutzername oder Passwort ungültig", "Login fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                txtUsername.Text = "";
+                                txtPassword.Text = "";
+                                txtUsername.Focus();
+                            }
+                    }
+                }
             }
-            catch (Exception ex)
+            catch(Exception ex) 
             {
                 MessageBox.Show("Fehler: " + ex.Message, "Login fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                con.Close();
+            }
+            finally 
+            { 
+                Database.CloseConnection(); 
             }
         }
 
@@ -74,6 +79,7 @@ namespace L_R_Screen
 
         private void labelCreateAccount_Click(object sender, EventArgs e)
         {
+            //Öffnet die RegistrationPage
             new frmRegistration().Show();
             this.Hide();
         }
