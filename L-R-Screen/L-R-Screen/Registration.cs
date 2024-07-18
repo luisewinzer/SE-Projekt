@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.IO;
+using System.Reflection;
+using Microsoft.Win32;
 
 namespace L_R_Screen
 {
@@ -16,13 +19,17 @@ namespace L_R_Screen
         public frmRegistration()
         {
             InitializeComponent();
+            
         }
 
+<<<<<<< HEAD
         // Verbindungsobjekt zur Datenbank
         OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=db_users.mdb");
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
 
+=======
+>>>>>>> 91805e2820e3aaa6d4d377b10d38ca28a0394e3c
         private void buttonRegister_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "" && txtPassword.Text == "" && txtConPassword.Text == "")
@@ -35,6 +42,7 @@ namespace L_R_Screen
             }
             else if (txtPassword.Text == txtConPassword.Text)
             {
+<<<<<<< HEAD
                 try
                 {
                     con.Open();
@@ -59,6 +67,38 @@ namespace L_R_Screen
                     cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                     cmd.ExecuteNonQuery();
                     con.Close();
+=======
+                try { 
+
+                    Database.OpenConnection();
+
+                    // Überprüfung, ob Benutzername bereits existiert
+                    string checkUser = "SELECT COUNT(*) FROM [tbl_users] WHERE [username] = ?";
+                    using (OleDbCommand cmd = new OleDbCommand(checkUser, Database.Connection))
+                    {
+
+                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                        int userCount = (int)cmd.ExecuteScalar();
+                
+
+                    if (userCount > 0)
+                    {
+                        MessageBox.Show("Benutzername existiert bereits", "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Database.CloseConnection();
+                    }
+                    }
+                    // SQL-Insert-Befehl, um neuen Benutzer hinzuzufügen
+                    string register = "INSERT INTO [tbl_users] ([username], [password]) VALUES (?, ?)";
+
+                    using (OleDbCommand cmd = new OleDbCommand(register, Database.Connection))
+                    {
+                        cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                        cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    Database.CloseConnection();
+>>>>>>> 91805e2820e3aaa6d4d377b10d38ca28a0394e3c
 
                     // Zurücksetzen der Eingabefelder
                     txtUsername.Text = "";
@@ -66,11 +106,26 @@ namespace L_R_Screen
                     txtConPassword.Text = "";
 
                     MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+<<<<<<< HEAD
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Fehler: " + ex.Message, "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     con.Close();
+=======
+
+                    //Öffnet die LoginPage
+                    new frmLogin().Show();
+                    this.Hide();
+                }        
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fehler: " + ex.Message, "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    Database.CloseConnection();
+>>>>>>> 91805e2820e3aaa6d4d377b10d38ca28a0394e3c
                 }
             }
             else
@@ -82,6 +137,10 @@ namespace L_R_Screen
             }
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 91805e2820e3aaa6d4d377b10d38ca28a0394e3c
         // Event-Handler für die Checkbox zum Anzeigen/Verbergen des Passworts
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -99,6 +158,7 @@ namespace L_R_Screen
 
         private void labelBackToLogin_Click(object sender, EventArgs e)
         {
+            //Öffnet die LoginPage
             new frmLogin().Show();
             this.Hide();
         }
