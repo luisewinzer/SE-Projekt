@@ -29,21 +29,30 @@
         private void InitializeComponent()
         {
             this.panelTop = new System.Windows.Forms.Panel();
-            this.panelBottom = new System.Windows.Forms.Panel();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.panelRight = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.Tombstone4 = new System.Windows.Forms.PictureBox();
-            this.Tombstone3 = new System.Windows.Forms.PictureBox();
-            this.Tombstone2 = new System.Windows.Forms.PictureBox();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.panelBottom = new System.Windows.Forms.Panel();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.txtInformation = new System.Windows.Forms.TextBox();
+            this.picDeceased = new System.Windows.Forms.PictureBox();
+            this.txtDeathdate = new System.Windows.Forms.TextBox();
+            this.txtBirthdate = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.panelRight = new System.Windows.Forms.Panel();
             this.Tombstone1 = new System.Windows.Forms.PictureBox();
+            this.Tombstone2 = new System.Windows.Forms.PictureBox();
+            this.Tombstone3 = new System.Windows.Forms.PictureBox();
+            this.Tombstone4 = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
+            this.panelBottom.SuspendLayout();
+            this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDeceased)).BeginInit();
             this.panelRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tombstone1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -56,47 +65,6 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(816, 31);
             this.panelTop.TabIndex = 0;
-            // 
-            // panelBottom
-            // 
-            this.panelBottom.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(0, 458);
-            this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(816, 31);
-            this.panelBottom.TabIndex = 1;
-            // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.Color.Honeydew;
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 31);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(232, 427);
-            this.panelLeft.TabIndex = 2;
-            // 
-            // panelRight
-            // 
-            this.panelRight.Controls.Add(this.Tombstone1);
-            this.panelRight.Controls.Add(this.Tombstone2);
-            this.panelRight.Controls.Add(this.Tombstone3);
-            this.panelRight.Controls.Add(this.Tombstone4);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(232, 31);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(584, 427);
-            this.panelRight.TabIndex = 3;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(702, 5);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOut.TabIndex = 0;
-            this.btnLogOut.Text = "Abmelden";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnExit
             // 
@@ -112,27 +80,143 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // Tombstone4
+            // btnLogOut
             // 
-            this.Tombstone4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Tombstone4.Image = global::L_R_Screen.Properties.Resources.Tombstone;
-            this.Tombstone4.Location = new System.Drawing.Point(350, 252);
-            this.Tombstone4.Name = "Tombstone4";
-            this.Tombstone4.Size = new System.Drawing.Size(104, 119);
-            this.Tombstone4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone4.TabIndex = 4;
-            this.Tombstone4.TabStop = false;
+            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(702, 5);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.TabIndex = 0;
+            this.btnLogOut.Text = "Abmelden";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // Tombstone3
+            // panelBottom
             // 
-            this.Tombstone3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Tombstone3.Image = global::L_R_Screen.Properties.Resources.Tombstone;
-            this.Tombstone3.Location = new System.Drawing.Point(130, 252);
-            this.Tombstone3.Name = "Tombstone3";
-            this.Tombstone3.Size = new System.Drawing.Size(104, 119);
-            this.Tombstone3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone3.TabIndex = 5;
-            this.Tombstone3.TabStop = false;
+            this.panelBottom.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelBottom.Controls.Add(this.btnUpload);
+            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBottom.Location = new System.Drawing.Point(0, 458);
+            this.panelBottom.Name = "panelBottom";
+            this.panelBottom.Size = new System.Drawing.Size(816, 31);
+            this.panelBottom.TabIndex = 1;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Location = new System.Drawing.Point(69, 3);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(93, 23);
+            this.btnUpload.TabIndex = 8;
+            this.btnUpload.Text = "Bild hochladen";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.BackColor = System.Drawing.Color.Honeydew;
+            this.panelLeft.Controls.Add(this.txtInformation);
+            this.panelLeft.Controls.Add(this.picDeceased);
+            this.panelLeft.Controls.Add(this.txtDeathdate);
+            this.panelLeft.Controls.Add(this.txtBirthdate);
+            this.panelLeft.Controls.Add(this.txtName);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 31);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(232, 427);
+            this.panelLeft.TabIndex = 2;
+            // 
+            // txtInformation
+            // 
+            this.txtInformation.BackColor = System.Drawing.Color.Honeydew;
+            this.txtInformation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtInformation.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInformation.Location = new System.Drawing.Point(23, 240);
+            this.txtInformation.Multiline = true;
+            this.txtInformation.Name = "txtInformation";
+            this.txtInformation.Size = new System.Drawing.Size(186, 166);
+            this.txtInformation.TabIndex = 8;
+            this.txtInformation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtInformation.Enter += new System.EventHandler(this.txtInformation_Enter);
+            this.txtInformation.Leave += new System.EventHandler(this.txtInformation_Leave);
+            // 
+            // picDeceased
+            // 
+            this.picDeceased.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picDeceased.Location = new System.Drawing.Point(23, 113);
+            this.picDeceased.Name = "picDeceased";
+            this.picDeceased.Size = new System.Drawing.Size(186, 109);
+            this.picDeceased.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDeceased.TabIndex = 8;
+            this.picDeceased.TabStop = false;
+            // 
+            // txtDeathdate
+            // 
+            this.txtDeathdate.BackColor = System.Drawing.Color.MintCream;
+            this.txtDeathdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDeathdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeathdate.ForeColor = System.Drawing.Color.Black;
+            this.txtDeathdate.Location = new System.Drawing.Point(55, 75);
+            this.txtDeathdate.Multiline = true;
+            this.txtDeathdate.Name = "txtDeathdate";
+            this.txtDeathdate.Size = new System.Drawing.Size(127, 20);
+            this.txtDeathdate.TabIndex = 9;
+            this.txtDeathdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDeathdate.Enter += new System.EventHandler(this.txtDeathdate_Enter);
+            this.txtDeathdate.Leave += new System.EventHandler(this.txtDeathdate_Leave);
+            // 
+            // txtBirthdate
+            // 
+            this.txtBirthdate.BackColor = System.Drawing.Color.MintCream;
+            this.txtBirthdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBirthdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthdate.ForeColor = System.Drawing.Color.Black;
+            this.txtBirthdate.Location = new System.Drawing.Point(55, 40);
+            this.txtBirthdate.Multiline = true;
+            this.txtBirthdate.Name = "txtBirthdate";
+            this.txtBirthdate.Size = new System.Drawing.Size(127, 20);
+            this.txtBirthdate.TabIndex = 8;
+            this.txtBirthdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBirthdate.Enter += new System.EventHandler(this.txtBirthdate_Enter);
+            this.txtBirthdate.Leave += new System.EventHandler(this.txtBirthdate_Leave);
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(0, 0);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(232, 25);
+            this.txtName.TabIndex = 8;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
+            // 
+            // panelRight
+            // 
+            this.panelRight.Controls.Add(this.Tombstone1);
+            this.panelRight.Controls.Add(this.Tombstone2);
+            this.panelRight.Controls.Add(this.Tombstone3);
+            this.panelRight.Controls.Add(this.Tombstone4);
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelRight.Location = new System.Drawing.Point(232, 31);
+            this.panelRight.Name = "panelRight";
+            this.panelRight.Size = new System.Drawing.Size(584, 427);
+            this.panelRight.TabIndex = 3;
+            // 
+            // Tombstone1
+            // 
+            this.Tombstone1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Tombstone1.Image = global::L_R_Screen.Properties.Resources.Tombstone;
+            this.Tombstone1.Location = new System.Drawing.Point(130, 57);
+            this.Tombstone1.Name = "Tombstone1";
+            this.Tombstone1.Size = new System.Drawing.Size(104, 119);
+            this.Tombstone1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Tombstone1.TabIndex = 7;
+            this.Tombstone1.TabStop = false;
             // 
             // Tombstone2
             // 
@@ -145,16 +229,27 @@
             this.Tombstone2.TabIndex = 6;
             this.Tombstone2.TabStop = false;
             // 
-            // Tombstone1
+            // Tombstone3
             // 
-            this.Tombstone1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Tombstone1.Image = global::L_R_Screen.Properties.Resources.Tombstone;
-            this.Tombstone1.Location = new System.Drawing.Point(130, 57);
-            this.Tombstone1.Name = "Tombstone1";
-            this.Tombstone1.Size = new System.Drawing.Size(104, 119);
-            this.Tombstone1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone1.TabIndex = 7;
-            this.Tombstone1.TabStop = false;
+            this.Tombstone3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Tombstone3.Image = global::L_R_Screen.Properties.Resources.Tombstone;
+            this.Tombstone3.Location = new System.Drawing.Point(130, 252);
+            this.Tombstone3.Name = "Tombstone3";
+            this.Tombstone3.Size = new System.Drawing.Size(104, 119);
+            this.Tombstone3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Tombstone3.TabIndex = 5;
+            this.Tombstone3.TabStop = false;
+            // 
+            // Tombstone4
+            // 
+            this.Tombstone4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Tombstone4.Image = global::L_R_Screen.Properties.Resources.Tombstone;
+            this.Tombstone4.Location = new System.Drawing.Point(350, 252);
+            this.Tombstone4.Name = "Tombstone4";
+            this.Tombstone4.Size = new System.Drawing.Size(104, 119);
+            this.Tombstone4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Tombstone4.TabIndex = 4;
+            this.Tombstone4.TabStop = false;
             // 
             // frmMainPage
             // 
@@ -172,12 +267,17 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmMainPage_Load);
             this.panelTop.ResumeLayout(false);
+            this.panelBottom.ResumeLayout(false);
+            this.panelLeft.ResumeLayout(false);
+            this.panelLeft.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picDeceased)).EndInit();
             this.panelRight.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tombstone1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,5 +294,11 @@
         private System.Windows.Forms.PictureBox Tombstone1;
         private System.Windows.Forms.PictureBox Tombstone2;
         private System.Windows.Forms.PictureBox Tombstone3;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtBirthdate;
+        private System.Windows.Forms.TextBox txtDeathdate;
+        private System.Windows.Forms.PictureBox picDeceased;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.TextBox txtInformation;
     }
 }
