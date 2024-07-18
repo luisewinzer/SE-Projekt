@@ -64,6 +64,7 @@ namespace L_R_Screen
                             deceasedPersons.Add(person);
                         }
                         MessageBox.Show(deceasedPersons[0].name + "");
+                        //test
                     }
                 }
             }
