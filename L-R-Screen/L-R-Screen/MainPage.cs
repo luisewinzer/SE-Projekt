@@ -14,6 +14,8 @@ namespace L_R_Screen
 {
     public partial class frmMainPage : Form
     {
+        string datenbankName = "db_users";
+        private List<DeceasedPerson> deceasedPersons;
         public frmMainPage()
         {
             InitializeComponent();
@@ -39,28 +41,29 @@ namespace L_R_Screen
 
         private void LoadDeceasedPersons()
         {
-            ArrayList deceasedPersons = new ArrayList();
+            deceasedPersons = new List<DeceasedPerson>();
 
-            string query = "SELECT name, furtherInformation, birthdate, deathdate FROM tbl_graves";
+            string query = "SELECT name, birthdate, deathdate, info FROM tbl_graves";
 
             try
             {
-                Database.OpenConnection("db_graves");
+                Database.OpenConnection(datenbankName);
 
-                using (OleDbCommand cmd = new OleDbCommand(query, Database.GetConnection("db_graves")))
+                using (OleDbCommand cmd = new OleDbCommand(query, Database.GetConnection(datenbankName)))
                 {
                     using (OleDbDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             string name = reader["name"].ToString();
-                            string furtherInformation = reader["furtherInformation"].ToString();
+                            string furtherInformation = reader["info"].ToString();
                             string birthdate = reader["birthdate"].ToString();
                             string deathdate = reader["deathdate"].ToString();
 
                             DeceasedPerson person = new DeceasedPerson(name, furtherInformation, birthdate, deathdate);
                             deceasedPersons.Add(person);
                         }
+                        MessageBox.Show(deceasedPersons[0].name + "");
                     }
                 }
             }

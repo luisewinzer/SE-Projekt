@@ -109,8 +109,5 @@
   <ItemGroup>
     <EmbeddedResource Include="db_users.mdb" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="db_graves.mdb" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
