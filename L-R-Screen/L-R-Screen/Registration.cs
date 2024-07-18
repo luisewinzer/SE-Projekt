@@ -16,6 +16,7 @@ namespace L_R_Screen
 {
     public partial class frmRegistration : Form
     {
+        string datenbankName = "db_users";
         public frmRegistration()
         {
             InitializeComponent();
@@ -36,11 +37,11 @@ namespace L_R_Screen
             {
                 try { 
 
-                    Database.OpenConnection("db_users");
+                    Database.OpenConnection(datenbankName);
 
                     // Überprüfung, ob Benutzername bereits existiert
                     string checkUser = "SELECT COUNT(*) FROM [tbl_users] WHERE [username] = ?";
-                    using (OleDbCommand cmd = new OleDbCommand(checkUser, Database.GetConnection("db_users")))
+                    using (OleDbCommand cmd = new OleDbCommand(checkUser, Database.GetConnection(datenbankName)))
                     {
 
                         cmd.Parameters.AddWithValue("@username", txtUsername.Text);
@@ -50,20 +51,20 @@ namespace L_R_Screen
                     if (userCount > 0)
                     {
                         MessageBox.Show("Benutzername existiert bereits", "Registrierung fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Database.CloseConnection("db_graves");
+                        Database.CloseConnection(datenbankName);
                     }
                     }
                     // SQL-Insert-Befehl, um neuen Benutzer hinzuzufügen
                     string register = "INSERT INTO [tbl_users] ([username], [password]) VALUES (?, ?)";
 
-                    using (OleDbCommand cmd = new OleDbCommand(register, Database.GetConnection("db_users")))
+                    using (OleDbCommand cmd = new OleDbCommand(register, Database.GetConnection(datenbankName)))
                     {
                         cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                         cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                         cmd.ExecuteNonQuery();
                     }
 
-                    Database.CloseConnection("db_graves");
+                    Database.CloseConnection(datenbankName);
 
                     // Zurücksetzen der Eingabefelder
                     txtUsername.Text = "";
@@ -82,7 +83,7 @@ namespace L_R_Screen
                 }
                 finally
                 {
-                    Database.CloseConnection("db_graves");
+                    Database.CloseConnection(datenbankName);
                 }
             }
             else

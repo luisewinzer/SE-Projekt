@@ -15,20 +15,23 @@ namespace L_R_Screen
 {
     public partial class frmLogin : Form
     {
+        string datenbankName = "db_users";
         public frmLogin()
         {
-            InitializeComponent();            
+            InitializeComponent();
+
+            
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             try 
             { 
-                Database.OpenConnection("db_users");
+                Database.OpenConnection(datenbankName);
 
                 // SQL abfrage zum ermitteln der benutzer daten
                 string login = "SELECT * FROM tbl_users WHERE username = ? AND password = ?";
 
-                using (OleDbCommand cmd = new OleDbCommand(login, Database.GetConnection("db_users")))
+                using (OleDbCommand cmd = new OleDbCommand(login, Database.GetConnection(datenbankName)))
                 {
                     cmd.Parameters.AddWithValue("?", txtUsername.Text);
                     cmd.Parameters.AddWithValue("?", txtPassword.Text);
@@ -58,7 +61,7 @@ namespace L_R_Screen
             }
             finally 
             { 
-                Database.CloseConnection("db_users"); 
+                Database.CloseConnection(datenbankName); 
             }
         }
 

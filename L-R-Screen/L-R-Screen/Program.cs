@@ -21,17 +21,16 @@ namespace L_R_Screen
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            string datenbankName = "db_users";
             // Öffnen der Datenbankverbindung
             try
             {
                 //Datenbank für Login und Registieung
-                Database.OpenConnection("db_users");
-                //Datenbank für MainPage
-                Database.OpenConnection("db_graves");
+                Database.OpenConnection(datenbankName);
 
                 // Beispiel für eine Datenbankoperation fürs Debugen für db_users
                 string query1 = "SELECT COUNT(*) FROM tbl_users";
-                using (OleDbCommand cmd1 = new OleDbCommand(query1, Database.GetConnection("db_users")))
+                using (OleDbCommand cmd1 = new OleDbCommand(query1, Database.GetConnection(datenbankName)))
                 {
                     int userCount1 = (int)cmd1.ExecuteScalar();
                     MessageBox.Show("Anzahl der Benutzer in db_users: " + userCount1);
@@ -39,7 +38,7 @@ namespace L_R_Screen
 
                 // Beispiel für eine Datenbankoperation für Debugen für db_graves
                 string query2 = "SELECT COUNT(*) FROM tbl_graves";
-                using (OleDbCommand cmd2 = new OleDbCommand(query2, Database.GetConnection("db_graves")))
+                using (OleDbCommand cmd2 = new OleDbCommand(query2, Database.GetConnection(datenbankName)))
                 {
                     int userCount2 = (int)cmd2.ExecuteScalar();
                     MessageBox.Show("Anzahl der Benutzer in db_graves: " + userCount2);
@@ -51,8 +50,8 @@ namespace L_R_Screen
             }
             finally
             {
-                Database.CloseConnection("db_users");
-                Database.CloseConnection("db_graves");
+                Database.CloseConnection(datenbankName);
+                
             }
 
             Application.Run(new frmLogin());
