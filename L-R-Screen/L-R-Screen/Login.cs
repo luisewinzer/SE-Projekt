@@ -18,7 +18,6 @@ namespace L_R_Screen
         public frmLogin()
         {
             InitializeComponent();
-            
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -40,10 +39,14 @@ namespace L_R_Screen
 
                             if (dr.Read() == true)
                             {
-                                //Öffnet die MainPage
-                                new frmMainPage().Show();
-                                this.Hide();
-                            }
+                            // Benutzername wird beim erfolgreichen Login gespeichert
+                            string username = txtUsername.Text;
+
+                            // MainPage öffnen und den Benutzernamen übergeben
+                            frmMainPage mainPage = new frmMainPage(username);
+                            mainPage.Show();
+                            this.Hide();
+                        }
                             else
                             {
                                 MessageBox.Show("Benutzername oder Passwort ungültig", "Login fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);

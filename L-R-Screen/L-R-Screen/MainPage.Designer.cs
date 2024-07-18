@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.panelTop = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelRight = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.Tombstone4 = new System.Windows.Forms.PictureBox();
-            this.Tombstone3 = new System.Windows.Forms.PictureBox();
-            this.Tombstone2 = new System.Windows.Forms.PictureBox();
             this.Tombstone1 = new System.Windows.Forms.PictureBox();
+            this.Tombstone2 = new System.Windows.Forms.PictureBox();
+            this.Tombstone3 = new System.Windows.Forms.PictureBox();
+            this.Tombstone4 = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             this.panelRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tombstone1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -56,6 +56,31 @@
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(816, 31);
             this.panelTop.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Gray;
+            this.btnExit.Location = new System.Drawing.Point(785, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(31, 31);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(702, 5);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOut.TabIndex = 0;
+            this.btnLogOut.Text = "Abmelden";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // panelBottom
             // 
@@ -87,52 +112,16 @@
             this.panelRight.Size = new System.Drawing.Size(584, 427);
             this.panelRight.TabIndex = 3;
             // 
-            // btnLogOut
+            // Tombstone1
             // 
-            this.btnLogOut.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Location = new System.Drawing.Point(702, 5);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOut.TabIndex = 0;
-            this.btnLogOut.Text = "Abmelden";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.ForeColor = System.Drawing.Color.Gray;
-            this.btnExit.Location = new System.Drawing.Point(785, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(31, 31);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // Tombstone4
-            // 
-            this.Tombstone4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Tombstone4.Image = global::L_R_Screen.Properties.Resources.Tombstone;
-            this.Tombstone4.Location = new System.Drawing.Point(350, 252);
-            this.Tombstone4.Name = "Tombstone4";
-            this.Tombstone4.Size = new System.Drawing.Size(104, 119);
-            this.Tombstone4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone4.TabIndex = 4;
-            this.Tombstone4.TabStop = false;
-            // 
-            // Tombstone3
-            // 
-            this.Tombstone3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Tombstone3.Image = global::L_R_Screen.Properties.Resources.Tombstone;
-            this.Tombstone3.Location = new System.Drawing.Point(130, 252);
-            this.Tombstone3.Name = "Tombstone3";
-            this.Tombstone3.Size = new System.Drawing.Size(104, 119);
-            this.Tombstone3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone3.TabIndex = 5;
-            this.Tombstone3.TabStop = false;
+            this.Tombstone1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Tombstone1.Image = global::L_R_Screen.Properties.Resources.Tombstone;
+            this.Tombstone1.Location = new System.Drawing.Point(130, 57);
+            this.Tombstone1.Name = "Tombstone1";
+            this.Tombstone1.Size = new System.Drawing.Size(104, 119);
+            this.Tombstone1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Tombstone1.TabIndex = 7;
+            this.Tombstone1.TabStop = false;
             // 
             // Tombstone2
             // 
@@ -145,16 +134,27 @@
             this.Tombstone2.TabIndex = 6;
             this.Tombstone2.TabStop = false;
             // 
-            // Tombstone1
+            // Tombstone3
             // 
-            this.Tombstone1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Tombstone1.Image = global::L_R_Screen.Properties.Resources.Tombstone;
-            this.Tombstone1.Location = new System.Drawing.Point(130, 57);
-            this.Tombstone1.Name = "Tombstone1";
-            this.Tombstone1.Size = new System.Drawing.Size(104, 119);
-            this.Tombstone1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone1.TabIndex = 7;
-            this.Tombstone1.TabStop = false;
+            this.Tombstone3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Tombstone3.Image = global::L_R_Screen.Properties.Resources.Tombstone;
+            this.Tombstone3.Location = new System.Drawing.Point(130, 252);
+            this.Tombstone3.Name = "Tombstone3";
+            this.Tombstone3.Size = new System.Drawing.Size(104, 119);
+            this.Tombstone3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Tombstone3.TabIndex = 5;
+            this.Tombstone3.TabStop = false;
+            // 
+            // Tombstone4
+            // 
+            this.Tombstone4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Tombstone4.Image = global::L_R_Screen.Properties.Resources.Tombstone;
+            this.Tombstone4.Location = new System.Drawing.Point(350, 252);
+            this.Tombstone4.Name = "Tombstone4";
+            this.Tombstone4.Size = new System.Drawing.Size(104, 119);
+            this.Tombstone4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Tombstone4.TabIndex = 4;
+            this.Tombstone4.TabStop = false;
             // 
             // frmMainPage
             // 
@@ -174,10 +174,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelTop.ResumeLayout(false);
             this.panelRight.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tombstone1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tombstone4)).EndInit();
             this.ResumeLayout(false);
 
         }
