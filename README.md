@@ -12,13 +12,13 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 
 ### Funktionalitäten
 **Login-Registration-Screen**
-- Ermöglicht Benutzern, sich anzumelden oder ein neues Konto zu registrieren.
+- Ermöglicht Benutzern, sich anzumelden oder ein neues Konto zu erstellen.
 - Schützt sensible Daten durch Authentifizierung.
 - Stellt sicher, dass nur autorisierte Benutzer Zugang zu den Daten haben.
 
 **Steckbrief der Verstorbenen**
 - Verwaltungstool zum Anzeigen und Speichern der Daten der Verstorbenen.
-- Benutzer können Namen, Geburtsdatum, Sterbedatum, zusätzliche Informationen und ein Bild der Verstorbenen eingeben.
+- Benutzer können Namen, Geburtsdatum, Sterbedatum und zusätzliche Informationen des Verstorbenen eingeben.
 - Die Daten werden in einer Datenbank gespeichert und können bei Bedarf wieder abgerufen und bearbeitet werden.
 
 **Friedhofs-Grundriss**
@@ -29,14 +29,10 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 ---
 
 ### Beschreibung der Klassen
-#### C User
-In der Klasse `User` kann mit `CreateUser` ein eigener Account angelegt werden, der aus `username` und `password` besteht. Mit Hilfe `CheckCredentials` wird die Eingabe der Daten beim `Login` auf ihre Richtigkeit überprüft. Außerdem gibt es eine zugehörige `Logout` Funktion.
-
 #### C DeceasedPerson
-Mit Hilfe der Klasse `DeceasedPerson` werden die Daten (`name`, `birthdate`, `deathdate`, `furtherInformation` und `picture`) über die verstorbene Person erfasst. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden.
+Mit Hilfe der Klasse `DeceasedPerson` werden die Daten (`Name`, `Birthdate`, `Deathdate`, `Information`) über die verstorbene Person erfasst. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden.
 
-#### C GraveStone
-Die Klasse `GraveStone` ist für Verwaltung der Grabsteine verantwortlich und zeigt den Namen `name`, den Geburtstag `birthdate` und den Sterbetag `deathdate` an. Es kann ein Grabstein mit `CreateGraveStone` erstellt werden und mit `DeleteGraveStone` entfernt werden.
+#### C Database
 
 ---
 
