@@ -13,11 +13,6 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 ### Funktionalitäten
 - Benutzeranmeldung zum Schutz sensibler Daten
 - Verwaltungstool für den Steckbrief der Verstorbenen
-- (Benachrichtigungen für Gedenktage)*
-- (Suchfunktion nach verstorbenen Personen)*
-- (Grabpflege: digitale Kerze anzünden, Blumen ablegen)*
-
-`*` diese und ggf. noch weitere Funktionen, wenn ausreichend Zeit vorhanden ist
 
 ---
 
@@ -31,18 +26,15 @@ Mit Hilfe der Klasse `DeceasedPerson` werden die Daten (`name`, `birthdate`, `de
 #### C GraveStone
 Die Klasse `GraveStone` ist für Verwaltung der Grabsteine verantwortlich und zeigt den Namen `name`, den Geburtstag `birthdate` und den Sterbetag `deathdate` an. Es kann ein Grabstein mit `CreateGraveStone` erstellt werden und mit `DeleteGraveStone` entfernt werden.
 
-#### (C NotificationManager)
-Die Klasse `NotificationManager` ist für die Benachrichtigung von Gedenktagen verantwortlich. Die Funktion `SetReminderMemorialDay` kann für die Erinnerung an Geburtstage, Sterbetage oder andere wichtige Ereignisse verwendet werden.
-
-#### (C SearchManager)
-Mit der Klasse `SearchManager` behält man auch bei vielen digitalen Grabsteinen den Überblick. Mit `SearchForDeceased` kann nach einer bestimmten verstorbenen Person gesucht werden.
-
-#### (C GraveCare)
-Die Klasse `GraveCare` beinhaltet die beiden Funktionen `DigitalCandle` und `DigitalFlowers` und kann ggf. durch weitere Funktionen ergänzt werden. Mit Hilfe von `DigitalCandle` kann zum Gedenken an die verstorbene Person eine Kerze mit `AddCandle` angezündet werden. Diese kann auch wieder mit `RemoveCandle` entfernt werden. Mit Hilfe von `DigitalFlowers` können zum Gedenken an die verstorbene Person Blumen mit `AddFlowers` hinzugefügt werden. Diese können auch mit `RemoveFlowers`entfernt werden.
-
 ---
 
 ### Klassendiagramm
 <img width="1401" alt="Bildschirmfoto 2024-06-29 um 10 37 21" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/f2f7cc8d-e33e-40f3-8212-511f6ad38b45">
 
 ---
+
+### Erweiterungsmöglichkeiten
+- Benachrichtigungen für Gedenktage
+- Suchfunktion nach verstorbenen Personen
+- Verknüpfung mit anderen verstorbenen Personen
+- Grabpflege: digitale Kerze anzünden, Blumen ablegen
