@@ -21,7 +21,7 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 - Benutzer können Namen, Geburtsdatum, Sterbedatum, zusätzliche Informationen und ein Bild der Verstorbenen eingeben.
 - Die Daten werden in einer Datenbank gespeichert und können bei Bedarf wieder abgerufen und bearbeitet werden.
 
-**Friedhofs-Grundriss:**
+**Friedhofs-Grundriss**
 - Visuelle Darstellung der gespeicherten Daten in Form von Grabsteinen.
 - Benutzer können auf einen Grabstein klicken, um die Details des Verstorbenen anzuzeigen oder zu bearbeiten.
 - Einfache Navigation und Bedienung durch eine benutzerfreundliche Oberfläche.
