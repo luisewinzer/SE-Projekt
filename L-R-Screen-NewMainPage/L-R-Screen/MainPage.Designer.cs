@@ -163,19 +163,23 @@ namespace L_R_Screen
             // 
             // mtxtDeathdate
             // 
-            this.mtxtDeathdate.Location = new System.Drawing.Point(41, 209);
+            this.mtxtDeathdate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtDeathdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtxtDeathdate.Location = new System.Drawing.Point(40, 198);
             this.mtxtDeathdate.Mask = "00/00/0000";
             this.mtxtDeathdate.Name = "mtxtDeathdate";
-            this.mtxtDeathdate.Size = new System.Drawing.Size(216, 25);
+            this.mtxtDeathdate.Size = new System.Drawing.Size(216, 18);
             this.mtxtDeathdate.TabIndex = 0;
             this.mtxtDeathdate.ValidatingType = typeof(System.DateTime);
             // 
             // mtxtBirthdate
             // 
-            this.mtxtBirthdate.Location = new System.Drawing.Point(41, 143);
+            this.mtxtBirthdate.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtBirthdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtxtBirthdate.Location = new System.Drawing.Point(41, 141);
             this.mtxtBirthdate.Mask = "00/00/0000";
             this.mtxtBirthdate.Name = "mtxtBirthdate";
-            this.mtxtBirthdate.Size = new System.Drawing.Size(216, 25);
+            this.mtxtBirthdate.Size = new System.Drawing.Size(216, 18);
             this.mtxtBirthdate.TabIndex = 1;
             this.mtxtBirthdate.ValidatingType = typeof(System.DateTime);
             // 
@@ -185,17 +189,17 @@ namespace L_R_Screen
             this.txtInformation.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtInformation.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInformation.ForeColor = System.Drawing.Color.Black;
-            this.txtInformation.Location = new System.Drawing.Point(41, 277);
+            this.txtInformation.Location = new System.Drawing.Point(41, 255);
             this.txtInformation.Multiline = true;
             this.txtInformation.Name = "txtInformation";
-            this.txtInformation.Size = new System.Drawing.Size(216, 83);
+            this.txtInformation.Size = new System.Drawing.Size(216, 95);
             this.txtInformation.TabIndex = 41;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 255);
+            this.label1.Location = new System.Drawing.Point(38, 235);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 17);
             this.label1.TabIndex = 40;
@@ -221,18 +225,18 @@ namespace L_R_Screen
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Location = new System.Drawing.Point(41, 76);
+            this.txtName.Location = new System.Drawing.Point(41, 74);
             this.txtName.MaxLength = 60;
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(216, 31);
+            this.txtName.Size = new System.Drawing.Size(216, 29);
             this.txtName.TabIndex = 35;
             // 
             // labelConPassword
             // 
             this.labelConPassword.AutoSize = true;
             this.labelConPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConPassword.Location = new System.Drawing.Point(37, 187);
+            this.labelConPassword.Location = new System.Drawing.Point(38, 178);
             this.labelConPassword.Name = "labelConPassword";
             this.labelConPassword.Size = new System.Drawing.Size(83, 17);
             this.labelConPassword.TabIndex = 33;
