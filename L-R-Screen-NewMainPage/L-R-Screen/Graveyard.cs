@@ -95,10 +95,11 @@ namespace L_R_Screen
                                 panelMiddle.Controls.Add(lblBirthdate);
                                 panelMiddle.Controls.Add(lblDeathdate);
 
+                                //Verschiebt Automatisch die Labels lblBirthdate und lblDeathdate unter lblName
                                 lblBirthdate.Location = new Point(lblName.Location.X, lblName.Location.Y + lblName.Height + 10);
                                 lblDeathdate.Location = new Point(lblBirthdate.Location.X, lblBirthdate.Location.Y + lblBirthdate.Height + 10);
 
-                            lblName.BringToFront();
+                                lblName.BringToFront();
                                 lblBirthdate.BringToFront();
                                 lblDeathdate.BringToFront();
 
@@ -198,7 +199,7 @@ namespace L_R_Screen
         {
             this.Show();
         }
-
+        //Fügt Automatischen einen Umbruch ein wenn eine maximale länge an Zeichen erreicht wurde
         public string InsertLineBreaks(string text, int maxLineLength)
         {
             if (string.IsNullOrEmpty(text) || maxLineLength <= 0)
