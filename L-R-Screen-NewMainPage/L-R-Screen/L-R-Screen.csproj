@@ -144,7 +144,7 @@
     <None Include="Resources\form.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\db_users.mdb" />
+    <EmbeddedResource Include="db_users.mdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

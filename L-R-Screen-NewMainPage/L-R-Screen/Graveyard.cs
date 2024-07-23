@@ -17,6 +17,7 @@ namespace L_R_Screen
             InitializeComponent();
             this.username = username;
             DisplayUsername();
+            
             DisplayDeceasedPersonInfo(1, Tombstone1); // Beispiel-ID 1
             DisplayDeceasedPersonInfo(2, Tombstone2); // Beispiel-ID 2
             DisplayDeceasedPersonInfo(3, Tombstone3); // Beispiel-ID 3
@@ -63,12 +64,14 @@ namespace L_R_Screen
                             {
                                 Label lblName = new Label
                                 {
+                                    
                                     Text = $"{name}",
                                     Location = new Point(tombstone.Location.X + 23, tombstone.Location.Y + 35),
                                     AutoSize = true,
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
                                 };
+                            lblName.AutoSize = false;
                                 Label lblBirthdate = new Label
                                 {
                                     Text = $"* {birthdate}",
@@ -77,6 +80,7 @@ namespace L_R_Screen
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
                                 };
+                            lblBirthdate.AutoSize = false;
                                 Label lblDeathdate = new Label
                                 {
                                     Text = $"† {deathdate}",
@@ -85,6 +89,7 @@ namespace L_R_Screen
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
                                 };
+                            lblDeathdate.AutoSize = false;
 
                                 this.Controls.Add(lblName);
                                 this.Controls.Add(lblBirthdate);
