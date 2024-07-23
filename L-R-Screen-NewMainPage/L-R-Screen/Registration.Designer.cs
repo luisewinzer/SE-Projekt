@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegister = new System.Windows.Forms.Button();
-            this.cbShowPassword = new System.Windows.Forms.CheckBox();
+            this.buttonRegister = new System.Windows.Forms.Button();
+            this.showPassword = new System.Windows.Forms.CheckBox();
             this.txtConPassword = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lblBackToLogin = new System.Windows.Forms.Label();
-            this.lblConPassword = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUsername = new System.Windows.Forms.Label();
-            this.lblRegistration = new System.Windows.Forms.Label();
-            this.lblChronicles = new System.Windows.Forms.Label();
-            this.lblCoffin = new System.Windows.Forms.Label();
+            this.labelBackToLogin = new System.Windows.Forms.Label();
+            this.labelConPassword = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.labelRegistration = new System.Windows.Forms.Label();
+            this.labelChronicles = new System.Windows.Forms.Label();
+            this.labelCoffin = new System.Windows.Forms.Label();
             this.IconCC = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.IconCC)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRegister
+            // buttonRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.Silver;
-            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegister.Location = new System.Drawing.Point(36, 433);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(216, 32);
-            this.btnRegister.TabIndex = 29;
-            this.btnRegister.Text = "Registrieren";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.buttonRegister.BackColor = System.Drawing.Color.Silver;
+            this.buttonRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegister.Location = new System.Drawing.Point(36, 433);
+            this.buttonRegister.Name = "buttonRegister";
+            this.buttonRegister.Size = new System.Drawing.Size(216, 32);
+            this.buttonRegister.TabIndex = 29;
+            this.buttonRegister.Text = "Registrieren";
+            this.buttonRegister.UseVisualStyleBackColor = false;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
-            // cbShowPassword
+            // showPassword
             // 
-            this.cbShowPassword.AutoSize = true;
-            this.cbShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbShowPassword.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbShowPassword.ForeColor = System.Drawing.Color.Gray;
-            this.cbShowPassword.Location = new System.Drawing.Point(132, 391);
-            this.cbShowPassword.Name = "cbShowPassword";
-            this.cbShowPassword.Size = new System.Drawing.Size(120, 17);
-            this.cbShowPassword.TabIndex = 28;
-            this.cbShowPassword.Text = "Passwort anzeigen";
-            this.cbShowPassword.UseVisualStyleBackColor = true;
-            this.cbShowPassword.CheckedChanged += new System.EventHandler(this.cbShowPassword_CheckedChanged);
+            this.showPassword.AutoSize = true;
+            this.showPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showPassword.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPassword.ForeColor = System.Drawing.Color.Gray;
+            this.showPassword.Location = new System.Drawing.Point(132, 391);
+            this.showPassword.Name = "showPassword";
+            this.showPassword.Size = new System.Drawing.Size(120, 17);
+            this.showPassword.TabIndex = 28;
+            this.showPassword.Text = "Passwort anzeigen";
+            this.showPassword.UseVisualStyleBackColor = true;
+            this.showPassword.CheckedChanged += new System.EventHandler(this.showPassword_CheckedChanged);
             // 
             // txtConPassword
             // 
@@ -111,75 +111,75 @@
             this.txtUsername.Size = new System.Drawing.Size(216, 31);
             this.txtUsername.TabIndex = 25;
             // 
-            // lblBackToLogin
+            // labelBackToLogin
             // 
-            this.lblBackToLogin.AutoSize = true;
-            this.lblBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblBackToLogin.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBackToLogin.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblBackToLogin.Location = new System.Drawing.Point(78, 478);
-            this.lblBackToLogin.Name = "lblBackToLogin";
-            this.lblBackToLogin.Size = new System.Drawing.Size(127, 13);
-            this.lblBackToLogin.TabIndex = 24;
-            this.lblBackToLogin.Text = "Zurück zur Anmeldung";
-            this.lblBackToLogin.Click += new System.EventHandler(this.lblBackToLogin_Click);
+            this.labelBackToLogin.AutoSize = true;
+            this.labelBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelBackToLogin.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBackToLogin.ForeColor = System.Drawing.Color.DarkGray;
+            this.labelBackToLogin.Location = new System.Drawing.Point(78, 478);
+            this.labelBackToLogin.Name = "labelBackToLogin";
+            this.labelBackToLogin.Size = new System.Drawing.Size(127, 13);
+            this.labelBackToLogin.TabIndex = 24;
+            this.labelBackToLogin.Text = "Zurück zur Anmeldung";
+            this.labelBackToLogin.Click += new System.EventHandler(this.labelBackToLogin_Click);
             // 
-            // lblConPassword
+            // labelConPassword
             // 
-            this.lblConPassword.AutoSize = true;
-            this.lblConPassword.Location = new System.Drawing.Point(32, 332);
-            this.lblConPassword.Name = "lblConPassword";
-            this.lblConPassword.Size = new System.Drawing.Size(143, 17);
-            this.lblConPassword.TabIndex = 23;
-            this.lblConPassword.Text = "Passwort wiederholen";
+            this.labelConPassword.AutoSize = true;
+            this.labelConPassword.Location = new System.Drawing.Point(32, 332);
+            this.labelConPassword.Name = "labelConPassword";
+            this.labelConPassword.Size = new System.Drawing.Size(143, 17);
+            this.labelConPassword.TabIndex = 23;
+            this.labelConPassword.Text = "Passwort wiederholen";
             // 
-            // lblPassword
+            // labelPassword
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(32, 266);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(63, 17);
-            this.lblPassword.TabIndex = 22;
-            this.lblPassword.Text = "Passwort";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Location = new System.Drawing.Point(32, 266);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(63, 17);
+            this.labelPassword.TabIndex = 22;
+            this.labelPassword.Text = "Passwort";
             // 
-            // lblUsername
+            // labelUsername
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(32, 199);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(96, 17);
-            this.lblUsername.TabIndex = 21;
-            this.lblUsername.Text = "Benutzername";
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(32, 199);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(96, 17);
+            this.labelUsername.TabIndex = 21;
+            this.labelUsername.Text = "Benutzername";
             // 
-            // lblRegistration
+            // labelRegistration
             // 
-            this.lblRegistration.AutoSize = true;
-            this.lblRegistration.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistration.Location = new System.Drawing.Point(86, 153);
-            this.lblRegistration.Name = "lblRegistration";
-            this.lblRegistration.Size = new System.Drawing.Size(113, 21);
-            this.lblRegistration.TabIndex = 20;
-            this.lblRegistration.Text = "Registrierung";
+            this.labelRegistration.AutoSize = true;
+            this.labelRegistration.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegistration.Location = new System.Drawing.Point(86, 153);
+            this.labelRegistration.Name = "labelRegistration";
+            this.labelRegistration.Size = new System.Drawing.Size(113, 21);
+            this.labelRegistration.TabIndex = 20;
+            this.labelRegistration.Text = "Registrierung";
             // 
-            // lblChronicles
+            // labelChronicles
             // 
-            this.lblChronicles.AutoSize = true;
-            this.lblChronicles.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChronicles.Location = new System.Drawing.Point(129, 106);
-            this.lblChronicles.Name = "lblChronicles";
-            this.lblChronicles.Size = new System.Drawing.Size(87, 16);
-            this.lblChronicles.TabIndex = 19;
-            this.lblChronicles.Text = "Chronicles";
+            this.labelChronicles.AutoSize = true;
+            this.labelChronicles.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChronicles.Location = new System.Drawing.Point(129, 106);
+            this.labelChronicles.Name = "labelChronicles";
+            this.labelChronicles.Size = new System.Drawing.Size(87, 16);
+            this.labelChronicles.TabIndex = 19;
+            this.labelChronicles.Text = "Chronicles";
             // 
-            // lblCoffin
+            // labelCoffin
             // 
-            this.lblCoffin.AutoSize = true;
-            this.lblCoffin.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoffin.Location = new System.Drawing.Point(68, 106);
-            this.lblCoffin.Name = "lblCoffin";
-            this.lblCoffin.Size = new System.Drawing.Size(55, 16);
-            this.lblCoffin.TabIndex = 18;
-            this.lblCoffin.Text = "Coffin";
+            this.labelCoffin.AutoSize = true;
+            this.labelCoffin.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCoffin.Location = new System.Drawing.Point(68, 106);
+            this.labelCoffin.Name = "labelCoffin";
+            this.labelCoffin.Size = new System.Drawing.Size(55, 16);
+            this.labelCoffin.TabIndex = 18;
+            this.labelCoffin.Text = "Coffin";
             // 
             // IconCC
             // 
@@ -197,18 +197,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 544);
-            this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.cbShowPassword);
+            this.Controls.Add(this.buttonRegister);
+            this.Controls.Add(this.showPassword);
             this.Controls.Add(this.txtConPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.lblBackToLogin);
-            this.Controls.Add(this.lblConPassword);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.lblRegistration);
-            this.Controls.Add(this.lblChronicles);
-            this.Controls.Add(this.lblCoffin);
+            this.Controls.Add(this.labelBackToLogin);
+            this.Controls.Add(this.labelConPassword);
+            this.Controls.Add(this.labelPassword);
+            this.Controls.Add(this.labelUsername);
+            this.Controls.Add(this.labelRegistration);
+            this.Controls.Add(this.labelChronicles);
+            this.Controls.Add(this.labelCoffin);
             this.Controls.Add(this.IconCC);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
@@ -224,18 +224,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.CheckBox cbShowPassword;
+        private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.CheckBox showPassword;
         private System.Windows.Forms.TextBox txtConPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label lblBackToLogin;
-        private System.Windows.Forms.Label lblConPassword;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.Label lblRegistration;
-        private System.Windows.Forms.Label lblChronicles;
-        private System.Windows.Forms.Label lblCoffin;
+        private System.Windows.Forms.Label labelBackToLogin;
+        private System.Windows.Forms.Label labelConPassword;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Label labelRegistration;
+        private System.Windows.Forms.Label labelChronicles;
+        private System.Windows.Forms.Label labelCoffin;
         private System.Windows.Forms.PictureBox IconCC;
     }
 }

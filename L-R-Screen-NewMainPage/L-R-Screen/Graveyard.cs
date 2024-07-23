@@ -190,8 +190,8 @@ namespace L_R_Screen
 
         private void btnData_Click(object sender, EventArgs e)
         {
-            frmDataRequest dataRequest = new frmDataRequest(username);
-            dataRequest.Show();
+            frmMainPage mainPage = new frmMainPage(username);
+            mainPage.Show();
             this.Close();
         }
 

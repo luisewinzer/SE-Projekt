@@ -40,8 +40,8 @@
             this.txtInfo2 = new System.Windows.Forms.TextBox();
             this.txtInfo1 = new System.Windows.Forms.TextBox();
             this.lblDataRequest = new System.Windows.Forms.Label();
-            this.lblChronicles = new System.Windows.Forms.Label();
-            this.lblCoffin = new System.Windows.Forms.Label();
+            this.labelChronicles = new System.Windows.Forms.Label();
+            this.labelCoffin = new System.Windows.Forms.Label();
             this.IconCC = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
             this.panelMiddle.SuspendLayout();
@@ -111,8 +111,8 @@
             this.panelMiddle.Controls.Add(this.txtInfo2);
             this.panelMiddle.Controls.Add(this.txtInfo1);
             this.panelMiddle.Controls.Add(this.lblDataRequest);
-            this.panelMiddle.Controls.Add(this.lblChronicles);
-            this.panelMiddle.Controls.Add(this.lblCoffin);
+            this.panelMiddle.Controls.Add(this.labelChronicles);
+            this.panelMiddle.Controls.Add(this.labelCoffin);
             this.panelMiddle.Controls.Add(this.IconCC);
             this.panelMiddle.Controls.Add(this.lblWelcome);
             this.panelMiddle.Location = new System.Drawing.Point(0, 31);
@@ -185,25 +185,25 @@
             this.lblDataRequest.Text = "Weiter zur Dateneingabe";
             this.lblDataRequest.Click += new System.EventHandler(this.lblDataRequest_Click);
             // 
-            // lblChronicles
+            // labelChronicles
             // 
-            this.lblChronicles.AutoSize = true;
-            this.lblChronicles.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChronicles.Location = new System.Drawing.Point(394, 128);
-            this.lblChronicles.Name = "lblChronicles";
-            this.lblChronicles.Size = new System.Drawing.Size(87, 16);
-            this.lblChronicles.TabIndex = 34;
-            this.lblChronicles.Text = "Chronicles";
+            this.labelChronicles.AutoSize = true;
+            this.labelChronicles.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelChronicles.Location = new System.Drawing.Point(394, 128);
+            this.labelChronicles.Name = "labelChronicles";
+            this.labelChronicles.Size = new System.Drawing.Size(87, 16);
+            this.labelChronicles.TabIndex = 34;
+            this.labelChronicles.Text = "Chronicles";
             // 
-            // lblCoffin
+            // labelCoffin
             // 
-            this.lblCoffin.AutoSize = true;
-            this.lblCoffin.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoffin.Location = new System.Drawing.Point(333, 128);
-            this.lblCoffin.Name = "lblCoffin";
-            this.lblCoffin.Size = new System.Drawing.Size(55, 16);
-            this.lblCoffin.TabIndex = 33;
-            this.lblCoffin.Text = "Coffin";
+            this.labelCoffin.AutoSize = true;
+            this.labelCoffin.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCoffin.Location = new System.Drawing.Point(333, 128);
+            this.labelCoffin.Name = "labelCoffin";
+            this.labelCoffin.Size = new System.Drawing.Size(55, 16);
+            this.labelCoffin.TabIndex = 33;
+            this.labelCoffin.Text = "Coffin";
             // 
             // IconCC
             // 
@@ -246,8 +246,8 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelMiddle;
         private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.Label lblChronicles;
-        private System.Windows.Forms.Label lblCoffin;
+        private System.Windows.Forms.Label labelChronicles;
+        private System.Windows.Forms.Label labelCoffin;
         private System.Windows.Forms.PictureBox IconCC;
         private System.Windows.Forms.Label lblDataRequest;
         private System.Windows.Forms.TextBox txtInfo1;
