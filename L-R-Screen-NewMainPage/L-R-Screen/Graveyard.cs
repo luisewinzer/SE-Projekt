@@ -205,37 +205,18 @@ namespace L_R_Screen
                 return text;
 
             var lines = new List<string>();
-            int start = 0;
 
-            while (start < text.Length)
+            for (int i = 0; i < text.Length; i += maxLineLength)
             {
-                // Finde die maximale Länge der aktuellen Zeile
-                int length = Math.Min(maxLineLength, text.Length - start);
-
-                // Versuche, das letzte Leerzeichen innerhalb der maximalen Länge zu finden
-                int lastSpace = text.LastIndexOf(' ', start + length, length);
-
-                // Wenn ein Leerzeichen gefunden wurde, verwende es für den Umbruch
-                if (lastSpace > start)
-                {
-                    length = lastSpace - start;
-                }
-
-                // Füge die aktuelle Zeile zur Liste hinzu
-                lines.Add(text.Substring(start, length));
-
-                // Setze den Start für die nächste Zeile
-                start += length;
-
-                // Überspringe das Leerzeichen nach dem Umbruch, wenn vorhanden
-                if (start < text.Length && text[start] == ' ')
-                {
-                    start++;
-                }
+                if (i + maxLineLength > text.Length)
+                    lines.Add(text.Substring(i));
+                else
+                    lines.Add(text.Substring(i, maxLineLength));
             }
 
             return string.Join("\n", lines);
         }
+
 
     }
 }
