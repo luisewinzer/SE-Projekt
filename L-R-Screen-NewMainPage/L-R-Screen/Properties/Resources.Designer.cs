@@ -63,6 +63,26 @@ namespace L_R_Screen.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap form {
+            get {
+                object obj = ResourceManager.GetObject("form", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home {
+            get {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IconCC {
             get {
                 object obj = ResourceManager.GetObject("IconCC", resourceCulture);
@@ -76,6 +96,16 @@ namespace L_R_Screen.Properties {
         internal static System.Drawing.Bitmap Tombstone {
             get {
                 object obj = ResourceManager.GetObject("Tombstone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tombstone__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tombstone (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
