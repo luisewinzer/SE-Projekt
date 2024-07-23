@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Windows.Forms;
@@ -64,14 +65,12 @@ namespace L_R_Screen
                             {
                                 Label lblName = new Label
                                 {
-                                    
-                                    Text = $"{name}",
+                                    Text = InsertLineBreaks($"{name}",20),
                                     Location = new Point(tombstone.Location.X + 23, tombstone.Location.Y + 35),
                                     AutoSize = true,
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
                                 };
-                            lblName.AutoSize = false;
                                 Label lblBirthdate = new Label
                                 {
                                     Text = $"* {birthdate}",
@@ -80,7 +79,6 @@ namespace L_R_Screen
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
                                 };
-                            lblBirthdate.AutoSize = false;
                                 Label lblDeathdate = new Label
                                 {
                                     Text = $"† {deathdate}",
@@ -89,7 +87,6 @@ namespace L_R_Screen
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
                                 };
-                            lblDeathdate.AutoSize = false;
 
                                 this.Controls.Add(lblName);
                                 this.Controls.Add(lblBirthdate);
@@ -198,5 +195,24 @@ namespace L_R_Screen
         {
             this.Show();
         }
+
+        public string InsertLineBreaks(string text, int maxLineLength)
+        {
+            if (string.IsNullOrEmpty(text) || maxLineLength <= 0)
+                return text;
+
+            var lines = new List<string>();
+
+            for (int i = 0; i < text.Length; i += maxLineLength)
+            {
+                if (i + maxLineLength > text.Length)
+                    lines.Add(text.Substring(i));
+                else
+                    lines.Add(text.Substring(i, maxLineLength));
+            }
+
+            return string.Join("\n", lines);
+        }
+
     }
 }
