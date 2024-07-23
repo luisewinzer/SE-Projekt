@@ -74,7 +74,7 @@ namespace L_R_Screen
                                 Label lblBirthdate = new Label
                                 {
                                     Text = $"* {birthdate}",
-                                    Location = new Point(tombstone.Location.X + 23, tombstone.Location.Y + 65),
+                                    //Location = new Point(tombstone.Location.X + 23, tombstone.Location.Y + 65),
                                     AutoSize = true,
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
@@ -82,7 +82,7 @@ namespace L_R_Screen
                                 Label lblDeathdate = new Label
                                 {
                                     Text = $"† {deathdate}",
-                                    Location = new Point(tombstone.Location.X + 23, tombstone.Location.Y + 95),
+                                    //Location = new Point(tombstone.Location.X + 23, tombstone.Location.Y + 95),
                                     AutoSize = true,
                                     BackColor = Color.DarkGray,
                                     Font = new Font(FontFamily.GenericSansSerif, 9f, FontStyle.Regular)
@@ -95,7 +95,10 @@ namespace L_R_Screen
                                 panelMiddle.Controls.Add(lblBirthdate);
                                 panelMiddle.Controls.Add(lblDeathdate);
 
-                                lblName.BringToFront();
+                                lblBirthdate.Location = new Point(lblName.Location.X, lblName.Location.Y + lblName.Height + 10);
+                                lblDeathdate.Location = new Point(lblBirthdate.Location.X, lblBirthdate.Location.Y + lblBirthdate.Height + 10);
+
+                            lblName.BringToFront();
                                 lblBirthdate.BringToFront();
                                 lblDeathdate.BringToFront();
 
@@ -202,13 +205,33 @@ namespace L_R_Screen
                 return text;
 
             var lines = new List<string>();
+            int start = 0;
 
-            for (int i = 0; i < text.Length; i += maxLineLength)
+            while (start < text.Length)
             {
-                if (i + maxLineLength > text.Length)
-                    lines.Add(text.Substring(i));
-                else
-                    lines.Add(text.Substring(i, maxLineLength));
+                // Finde die maximale Länge der aktuellen Zeile
+                int length = Math.Min(maxLineLength, text.Length - start);
+
+                // Versuche, das letzte Leerzeichen innerhalb der maximalen Länge zu finden
+                int lastSpace = text.LastIndexOf(' ', start + length, length);
+
+                // Wenn ein Leerzeichen gefunden wurde, verwende es für den Umbruch
+                if (lastSpace > start)
+                {
+                    length = lastSpace - start;
+                }
+
+                // Füge die aktuelle Zeile zur Liste hinzu
+                lines.Add(text.Substring(start, length));
+
+                // Setze den Start für die nächste Zeile
+                start += length;
+
+                // Überspringe das Leerzeichen nach dem Umbruch, wenn vorhanden
+                if (start < text.Length && text[start] == ' ')
+                {
+                    start++;
+                }
             }
 
             return string.Join("\n", lines);

@@ -38,6 +38,8 @@ namespace L_R_Screen
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.btnData = new System.Windows.Forms.PictureBox();
             this.panelMiddle = new System.Windows.Forms.Panel();
+            this.mtxtDeathdate = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBirthdate = new System.Windows.Forms.MaskedTextBox();
             this.txtInformation = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@ namespace L_R_Screen
             this.lblInfoDeceased = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.mtxtDeathdate = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtBirthdate = new System.Windows.Forms.MaskedTextBox();
             this.panelTop.SuspendLayout();
             this.panelBottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnGrave)).BeginInit();
@@ -161,6 +161,24 @@ namespace L_R_Screen
             this.panelMiddle.Size = new System.Drawing.Size(293, 427);
             this.panelMiddle.TabIndex = 2;
             // 
+            // mtxtDeathdate
+            // 
+            this.mtxtDeathdate.Location = new System.Drawing.Point(41, 209);
+            this.mtxtDeathdate.Mask = "00/00/0000";
+            this.mtxtDeathdate.Name = "mtxtDeathdate";
+            this.mtxtDeathdate.Size = new System.Drawing.Size(216, 25);
+            this.mtxtDeathdate.TabIndex = 0;
+            this.mtxtDeathdate.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtxtBirthdate
+            // 
+            this.mtxtBirthdate.Location = new System.Drawing.Point(41, 143);
+            this.mtxtBirthdate.Mask = "00/00/0000";
+            this.mtxtBirthdate.Name = "mtxtBirthdate";
+            this.mtxtBirthdate.Size = new System.Drawing.Size(216, 25);
+            this.mtxtBirthdate.TabIndex = 1;
+            this.mtxtBirthdate.ValidatingType = typeof(System.DateTime);
+            // 
             // txtInformation
             // 
             this.txtInformation.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -204,6 +222,7 @@ namespace L_R_Screen
             this.txtName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(41, 76);
+            this.txtName.MaxLength = 60;
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(216, 31);
@@ -262,24 +281,6 @@ namespace L_R_Screen
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(264, 427);
             this.panelLeft.TabIndex = 4;
-            // 
-            // mtxtDeathdate
-            // 
-            this.mtxtDeathdate.Location = new System.Drawing.Point(41, 209);
-            this.mtxtDeathdate.Mask = "00/00/0000";
-            this.mtxtDeathdate.Name = "mtxtDeathdate";
-            this.mtxtDeathdate.Size = new System.Drawing.Size(216, 25);
-            this.mtxtDeathdate.TabIndex = 0;
-            this.mtxtDeathdate.ValidatingType = typeof(System.DateTime);
-            // 
-            // mtxtBirthdate
-            // 
-            this.mtxtBirthdate.Location = new System.Drawing.Point(41, 143);
-            this.mtxtBirthdate.Mask = "00/00/0000";
-            this.mtxtBirthdate.Name = "mtxtBirthdate";
-            this.mtxtBirthdate.Size = new System.Drawing.Size(216, 25);
-            this.mtxtBirthdate.TabIndex = 1;
-            this.mtxtBirthdate.ValidatingType = typeof(System.DateTime);
             // 
             // frmMainPage
             // 
