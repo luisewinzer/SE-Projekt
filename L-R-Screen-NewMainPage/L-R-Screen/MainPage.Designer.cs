@@ -2,7 +2,7 @@
 
 namespace L_R_Screen
 {
-    partial class frmDataRequest
+    partial class frmMainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -41,11 +41,11 @@ namespace L_R_Screen
             this.mtxtDeathdate = new System.Windows.Forms.MaskedTextBox();
             this.mtxtBirthdate = new System.Windows.Forms.MaskedTextBox();
             this.txtInformation = new System.Windows.Forms.TextBox();
-            this.lblInformation = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.lblDeathdate = new System.Windows.Forms.Label();
-            this.lblBirthdate = new System.Windows.Forms.Label();
+            this.labelConPassword = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblInfoDeceased = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
@@ -149,11 +149,11 @@ namespace L_R_Screen
             this.panelMiddle.Controls.Add(this.mtxtDeathdate);
             this.panelMiddle.Controls.Add(this.mtxtBirthdate);
             this.panelMiddle.Controls.Add(this.txtInformation);
-            this.panelMiddle.Controls.Add(this.lblInformation);
+            this.panelMiddle.Controls.Add(this.label1);
             this.panelMiddle.Controls.Add(this.btnSave);
             this.panelMiddle.Controls.Add(this.txtName);
-            this.panelMiddle.Controls.Add(this.lblDeathdate);
-            this.panelMiddle.Controls.Add(this.lblBirthdate);
+            this.panelMiddle.Controls.Add(this.labelConPassword);
+            this.panelMiddle.Controls.Add(this.labelPassword);
             this.panelMiddle.Controls.Add(this.lblName);
             this.panelMiddle.Controls.Add(this.lblInfoDeceased);
             this.panelMiddle.Location = new System.Drawing.Point(262, 31);
@@ -195,15 +195,15 @@ namespace L_R_Screen
             this.txtInformation.Size = new System.Drawing.Size(216, 95);
             this.txtInformation.TabIndex = 41;
             // 
-            // lblInformation
+            // label1
             // 
-            this.lblInformation.AutoSize = true;
-            this.lblInformation.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformation.Location = new System.Drawing.Point(38, 235);
-            this.lblInformation.Name = "lblInformation";
-            this.lblInformation.Size = new System.Drawing.Size(138, 17);
-            this.lblInformation.TabIndex = 40;
-            this.lblInformation.Text = "Weitere Informationen";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 17);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Weitere Informationen";
             // 
             // btnSave
             // 
@@ -232,25 +232,25 @@ namespace L_R_Screen
             this.txtName.Size = new System.Drawing.Size(216, 29);
             this.txtName.TabIndex = 35;
             // 
-            // lblDeathdate
+            // labelConPassword
             // 
-            this.lblDeathdate.AutoSize = true;
-            this.lblDeathdate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeathdate.Location = new System.Drawing.Point(38, 178);
-            this.lblDeathdate.Name = "lblDeathdate";
-            this.lblDeathdate.Size = new System.Drawing.Size(83, 17);
-            this.lblDeathdate.TabIndex = 33;
-            this.lblDeathdate.Text = "Sterbedatum";
+            this.labelConPassword.AutoSize = true;
+            this.labelConPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConPassword.Location = new System.Drawing.Point(38, 178);
+            this.labelConPassword.Name = "labelConPassword";
+            this.labelConPassword.Size = new System.Drawing.Size(83, 17);
+            this.labelConPassword.TabIndex = 33;
+            this.labelConPassword.Text = "Sterbedatum";
             // 
-            // lblBirthdate
+            // labelPassword
             // 
-            this.lblBirthdate.AutoSize = true;
-            this.lblBirthdate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthdate.Location = new System.Drawing.Point(37, 121);
-            this.lblBirthdate.Name = "lblBirthdate";
-            this.lblBirthdate.Size = new System.Drawing.Size(91, 17);
-            this.lblBirthdate.TabIndex = 32;
-            this.lblBirthdate.Text = "Geburtsdatum";
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPassword.Location = new System.Drawing.Point(37, 121);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(91, 17);
+            this.labelPassword.TabIndex = 32;
+            this.labelPassword.Text = "Geburtsdatum";
             // 
             // lblName
             // 
@@ -286,7 +286,7 @@ namespace L_R_Screen
             this.panelLeft.Size = new System.Drawing.Size(264, 427);
             this.panelLeft.TabIndex = 4;
             // 
-            // frmDataRequest
+            // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +301,7 @@ namespace L_R_Screen
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmDataRequest";
+            this.Name = "frmMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panelTop.ResumeLayout(false);
             this.panelBottom.ResumeLayout(false);
@@ -325,12 +325,12 @@ namespace L_R_Screen
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblDeathdate;
-        private System.Windows.Forms.Label lblBirthdate;
+        private System.Windows.Forms.Label labelConPassword;
+        private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblInfoDeceased;
         private System.Windows.Forms.TextBox txtInformation;
-        private System.Windows.Forms.Label lblInformation;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.PictureBox btnData;
         private System.Windows.Forms.PictureBox btnGrave;

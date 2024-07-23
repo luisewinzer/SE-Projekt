@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace L_R_Screen
 {
-    public partial class frmDataRequest : Form
+    public partial class frmMainPage : Form
     {
         private string username;
         private Label lblUsername;
 
-        public frmDataRequest(string username)
+        public frmMainPage(string username)
         {
             InitializeComponent();
             this.username = username;
@@ -102,7 +102,7 @@ namespace L_R_Screen
                 Database.OpenConnection();
 
                 // SQL-Insert-Befehl, um neuen Verstorbenen hinzuzufügen
-                string register = "INSERT INTO [tbl_tombstones] ([name], [birthdate], [deathdate], [information]) VALUES (@name, @birthdate, @deathdate, @information)";
+                string register = "INSERT INTO [tbl_tombstones] ([name], [birthdate], [deathdate], [information]) VALUES (?, ?, ?, ?)";
                 using (OleDbCommand cmd = new OleDbCommand(register, Database.Connection))
                 {
                     cmd.Parameters.AddWithValue("@name", txtName.Text);
