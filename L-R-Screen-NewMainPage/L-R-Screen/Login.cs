@@ -12,7 +12,7 @@ namespace L_R_Screen
             InitializeComponent();
         }
 
-        private void buttonLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
@@ -55,9 +55,9 @@ namespace L_R_Screen
         }
 
         // Event-Handler für die Checkbox zum Anzeigen/Verbergen des Passworts
-        private void showPassword_CheckedChanged(object sender, EventArgs e)
+        private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (showPassword.Checked)
+            if (cbShowPassword.Checked)
             {
                 txtPassword.PasswordChar = '\0';
             }
@@ -67,7 +67,7 @@ namespace L_R_Screen
             }
         }
 
-        private void labelCreateAccount_Click(object sender, EventArgs e)
+        private void lblCreateAccount_Click(object sender, EventArgs e)
         {
             new frmRegistration().Show();
             this.Hide();

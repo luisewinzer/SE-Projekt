@@ -44,8 +44,8 @@ namespace L_R_Screen
 
         private void lblDataRequest_Click(object sender, EventArgs e)
         {
-            frmMainPage mainPage = new frmMainPage(username);
-            mainPage.Show();
+            frmDataRequest dataRequest = new frmDataRequest(username);
+            dataRequest.Show();
             this.Hide();
         }
 
