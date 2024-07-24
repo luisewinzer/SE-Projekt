@@ -41,7 +41,7 @@ class WelcomePage {
     + WelcomePage(string username)
     + DisplayUsername() : void
     + DisplayWelcomeMessage() : void
-    + CenterWelcomeMessage() : vpid
+    + CenterWelcomeMessage() : void
     + LblDataRequest_Click(object sender, EventArgs e) : void
     + LblGraveyard_Click(object sender, EventArgs e) : void
     + BtnLogOut_Click(object sender, EventArgs e) : void
