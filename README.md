@@ -1,6 +1,4 @@
-<div style="text-align: center;">
-  <h1>Digital Cemetery _Coffin Chronicles_</h1>
-  
+
   <p>
     <img src="https://github.com/user-attachments/assets/17d5e89c-b633-41d2-b7d7-a6959601eaff" alt="Image Description" />
   </p>
