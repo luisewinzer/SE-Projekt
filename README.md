@@ -34,7 +34,17 @@ Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Verge
 
 ## Anleitung und Verwendungshinweise
 
-...
+Nach dem Starten von Coffin Chronicles öffnet sich der Login-Screen, auf dem Sie sich anmelden können oder über den Sie zum Registration-Screen gelangen, um ein neues Konto zu erstellen. Sobald Sie sich erfolgreich angemeldet haben, werden Sie zur Willkommensseite weitergeleitet. Diese Seite gibt Ihnen einige Hinweise zu Coffin Chronicles.
+
+![image](https://github.com/user-attachments/assets/972b755c-c33d-4cef-a514-15e8d28b7bb5)
+
+Im Anschluss können Sie zur Dateneingabe-Seite wechseln, auf der Sie Informationen zu der verstorbenen Person eingeben können. Hier haben Sie die Möglichkeit, den Namen, das Geburtsdatum, das Sterbedatum und zusätzliche Informationen z.B. eine lustige Anekdote oder eine kleine Geschichte anzugeben. Diese Daten werden sicher in der Datenbank gespeichert.
+
+![image](https://github.com/user-attachments/assets/c78c5efb-debd-4f9a-880d-3c20bf6f14c0)
+
+Nach der Eingabe der Daten gelangen Sie zum Friedhof. Hier werden die eingegebenen Informationen visuell in Form von Grabsteinen dargestellt. Jeder Grabstein repräsentiert eine verstorbene Person. Durch Klicken auf einen Grabstein können Sie die Details der betreffenden Person anzeigen lassen. Die Benutzeroberfläche ist so gestaltet, dass Sie einfach und intuitiv durch die Darstellung navigieren können.
+
+![image](https://github.com/user-attachments/assets/4793f61f-82f9-48b0-b20f-6ecbe4d08556)
 
 
 ## Klassendiagramm
