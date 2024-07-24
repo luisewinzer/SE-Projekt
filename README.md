@@ -16,32 +16,37 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 - Schützt sensible Daten durch Authentifizierung.
 - Stellt sicher, dass nur autorisierte Benutzer Zugang zu den Daten haben.
 
-**Steckbrief der Verstorbenen**
-- Verwaltungstool zum Anzeigen und Speichern der Daten der Verstorbenen.
+**Willkommensseite**
+- Zeigt eine personalisierte Begrüßung basierend auf dem Benutzernamen.
+- Bietet einfachen Zugang zu allen Hauptfunktionen der Anwendung.
+- Ermöglicht eine nahtlose Navigation zu den Seiten "Dateneingabe-Tool" und "Friedhofs-Grundriss".
+
+**Dateneingabe-Tool**
+- Dateneingabe-Tool zum Speichern der Daten der Verstorbenen.
 - Benutzer können Namen, Geburtsdatum, Sterbedatum und zusätzliche Informationen des Verstorbenen eingeben.
-- Die Daten werden in einer Datenbank gespeichert und können bei Bedarf wieder abgerufen und bearbeitet werden.
+- Die Daten werden in einer Datenbank gespeichert und für einen Grabstein im Friedhofs-Grundriss aufbereitet.
 
 **Friedhofs-Grundriss**
 - Visuelle Darstellung der gespeicherten Daten in Form von Grabsteinen.
-- Benutzer können auf einen Grabstein klicken, um die Details des Verstorbenen anzuzeigen oder zu bearbeiten.
+- Benutzer können auf einen Grabstein klicken, um die Details des Verstorbenen anzuzeigen.
 - Einfache Navigation und Bedienung durch eine benutzerfreundliche Oberfläche.
   
 ---
 
-### Beschreibung der Klassen
-#### C DeceasedPerson
-Mit Hilfe der Klasse `DeceasedPerson` werden die Daten (`Name`, `Birthdate`, `Deathdate`, `Information`) über die verstorbene Person erfasst. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden.
+### Anleitung
 
-#### C Database
+...
 
 ---
 
 ### Klassendiagramm
-<img width="1401" alt="Bildschirmfoto 2024-06-29 um 10 37 21" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/f2f7cc8d-e33e-40f3-8212-511f6ad38b45">
+
+![image](https://github.com/user-attachments/assets/b9accd86-25e0-4e69-bdd8-c2a75d5339d6)
 
 ---
 
 ### Erweiterungsmöglichkeiten
+- Möglichkeit eigene Daten zu bearbeiten oder zu löschen
 - Benachrichtigungen für Gedenktage
 - Suchfunktion nach verstorbenen Personen
 - Verknüpfung mit anderen verstorbenen Personen
