@@ -33,7 +33,6 @@
             this.BtnExit = new System.Windows.Forms.Button();
             this.BtnLogOut = new System.Windows.Forms.Button();
             this.PnlBottom = new System.Windows.Forms.Panel();
-            this.LblWelcome = new System.Windows.Forms.Label();
             this.PnlMiddle = new System.Windows.Forms.Panel();
             this.LblGraveyard = new System.Windows.Forms.Label();
             this.TxtInfo3 = new System.Windows.Forms.TextBox();
@@ -94,16 +93,6 @@
             this.PnlBottom.Size = new System.Drawing.Size(816, 31);
             this.PnlBottom.TabIndex = 1;
             // 
-            // LblWelcome
-            // 
-            this.LblWelcome.AutoSize = true;
-            this.LblWelcome.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblWelcome.Location = new System.Drawing.Point(284, 35);
-            this.LblWelcome.Name = "LblWelcome";
-            this.LblWelcome.Size = new System.Drawing.Size(251, 20);
-            this.LblWelcome.TabIndex = 30;
-            this.LblWelcome.Text = "Willkommen bei Coffin Chronicles!";
-            // 
             // PnlMiddle
             // 
             this.PnlMiddle.Controls.Add(this.LblGraveyard);
@@ -114,7 +103,6 @@
             this.PnlMiddle.Controls.Add(this.LblChronicles);
             this.PnlMiddle.Controls.Add(this.LblCoffin);
             this.PnlMiddle.Controls.Add(this.IconCC);
-            this.PnlMiddle.Controls.Add(this.LblWelcome);
             this.PnlMiddle.Location = new System.Drawing.Point(0, 31);
             this.PnlMiddle.Name = "PnlMiddle";
             this.PnlMiddle.Size = new System.Drawing.Size(816, 427);
