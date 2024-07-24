@@ -2,11 +2,12 @@
 ## Digital Cemetery _Coffin Chronicles_
 
 ### Kurzbeschreibung
-Es wird eine GUI in C# erstellt, die einen Friedhof simuliert und veschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereitstellt. Die GUI wird für Friedhofsbesucher und Angehörige der Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
+Die vorliegende GUI simuliert einen Friedhof und stellt verschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereit. Die GUI wird für Angehörige von Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
 
-<img width="700" alt="Bildschirmfoto 2024-06-28 um 16 46 04" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/fba8f5f8-8d28-48ae-8a01-735003ecd60f">
 
-Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereiche. Auf der rechten Seite ist ein Grundriss des Friedhofs abgebildet, der vier beschriftete Grabsteine zeigt. Der zweite Grabstein ist beispielhaft ausgewählt und entsprechend grün markiert. Durch die Auswahl des Grabsteins öffnet sich auf der linken Seite ein zugehöriges Fenster mit Informationen zu der verstorbenen Person. Hier können individuell Bilder, lustige Anekdoten und andere Informationen von den Angehörigen eingefügt werden.
+<p align="center">
+  <img src="![image](https://github.com/user-attachments/assets/074c440d-ce16-4d40-ae0d-20aeea29d4f0)" />
+</p>
 
 ---
 
@@ -33,7 +34,7 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
   
 ---
 
-### Anleitung
+### Anleitung und Verwendungshinweise
 
 ...
 
@@ -41,11 +42,12 @@ Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereich
 
 ### Klassendiagramm
 
-![image](https://github.com/user-attachments/assets/b9accd86-25e0-4e69-bdd8-c2a75d5339d6)
+![image](https://github.com/user-attachments/assets/2bbdf0b5-35df-4635-86f1-940db0b51848)
 
 ---
 
 ### Erweiterungsmöglichkeiten
+- Anzahl der Grabsteine erhöhen
 - Möglichkeit eigene Daten zu bearbeiten oder zu löschen
 - Benachrichtigungen für Gedenktage
 - Suchfunktion nach verstorbenen Personen
