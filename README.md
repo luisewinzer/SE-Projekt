@@ -49,7 +49,7 @@ Nach der Eingabe der Daten gelangen Sie zum Friedhof. Hier werden die eingegeben
 
 ## Klassendiagramm
 
-![image](https://github.com/user-attachments/assets/2bbdf0b5-35df-4635-86f1-940db0b51848)
+![image](https://github.com/user-attachments/assets/9fed256b-a4fb-4282-bd81-4fc9cc4d1e3d)
 
 
 ## Erweiterungsmöglichkeiten
