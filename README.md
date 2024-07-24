@@ -1,47 +1,60 @@
-# Projekt Softwareentwicklung
-## Digital Cemetery _Coffin Chronicles_
 
-### Kurzbeschreibung
-Es wird eine GUI in C# erstellt, die einen Friedhof simuliert und veschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereitstellt. Die GUI wird für Friedhofsbesucher und Angehörige der Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
+  <p>
+    <img src="https://github.com/user-attachments/assets/17d5e89c-b633-41d2-b7d7-a6959601eaff" alt="Image Description" />
+  </p>
+</div>
 
-<img width="700" alt="Bildschirmfoto 2024-06-28 um 16 46 04" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/fba8f5f8-8d28-48ae-8a01-735003ecd60f">
+## Kurzbeschreibung
+Die vorliegende GUI simuliert einen Friedhof und stellt verschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereit. 
+Die GUI wird für Angehörige von Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod 
+(als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der 
+Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
 
-Die Abbildung zeigt einen ersten Entwurf der GUI. Sie teilt sich in zwei Bereiche. Auf der rechten Seite ist ein Grundriss des Friedhofs abgebildet, der vier beschriftete Grabsteine zeigt. Der zweite Grabstein ist beispielhaft ausgewählt und entsprechend grün markiert. Durch die Auswahl des Grabsteins öffnet sich auf der linken Seite ein zugehöriges Fenster mit Informationen zu der verstorbenen Person. Hier können individuell Bilder, lustige Anekdoten und andere Informationen von den Angehörigen eingefügt werden.
-
----
-
-### Funktionalitäten
+## Funktionalitäten
 **Login-Registration-Screen**
 - Ermöglicht Benutzern, sich anzumelden oder ein neues Konto zu erstellen.
 - Schützt sensible Daten durch Authentifizierung.
 - Stellt sicher, dass nur autorisierte Benutzer Zugang zu den Daten haben.
 
-**Steckbrief der Verstorbenen**
-- Verwaltungstool zum Anzeigen und Speichern der Daten der Verstorbenen.
+**Willkommensseite**
+- Zeigt eine personalisierte Begrüßung basierend auf dem Benutzernamen.
+- Bietet einfachen Zugang zu allen Hauptfunktionen der Anwendung.
+- Ermöglicht eine nahtlose Navigation zu den Seiten "Dateneingabe-Tool" und "Friedhofs-Grundriss".
+
+**Dateneingabe-Tool**
+- Dateneingabe-Tool zum Speichern der Daten der Verstorbenen.
 - Benutzer können Namen, Geburtsdatum, Sterbedatum und zusätzliche Informationen des Verstorbenen eingeben.
-- Die Daten werden in einer Datenbank gespeichert und können bei Bedarf wieder abgerufen und bearbeitet werden.
+- Die Daten werden in einer Datenbank gespeichert und für einen Grabstein im Friedhofs-Grundriss aufbereitet.
 
 **Friedhofs-Grundriss**
 - Visuelle Darstellung der gespeicherten Daten in Form von Grabsteinen.
-- Benutzer können auf einen Grabstein klicken, um die Details des Verstorbenen anzuzeigen oder zu bearbeiten.
+- Benutzer können auf einen Grabstein klicken, um die Details des Verstorbenen anzuzeigen.
 - Einfache Navigation und Bedienung durch eine benutzerfreundliche Oberfläche.
-  
----
 
-### Beschreibung der Klassen
-#### C DeceasedPerson
-Mit Hilfe der Klasse `DeceasedPerson` werden die Daten (`Name`, `Birthdate`, `Deathdate`, `Information`) über die verstorbene Person erfasst. Mit `AddInformation` können Informationen eingefügt und mit `DeleteInformation` gelöscht werden.
 
-#### C Database
+## Anleitung und Verwendungshinweise
 
----
+Nach dem Starten von Coffin Chronicles öffnet sich der Login-Screen, auf dem Sie sich anmelden können oder über den Sie zum Registration-Screen gelangen, um ein neues Konto zu erstellen. Sobald Sie sich erfolgreich angemeldet haben, werden Sie zur Willkommensseite weitergeleitet. Diese Seite gibt Ihnen einige Hinweise zu Coffin Chronicles.
 
-### Klassendiagramm
-<img width="1401" alt="Bildschirmfoto 2024-06-29 um 10 37 21" src="https://github.com/luisewinzer/SE-Projekt/assets/166633502/f2f7cc8d-e33e-40f3-8212-511f6ad38b45">
+![image](https://github.com/user-attachments/assets/972b755c-c33d-4cef-a514-15e8d28b7bb5)
 
----
+Im Anschluss können Sie zur Dateneingabe-Seite wechseln, auf der Sie Informationen zu der verstorbenen Person eingeben können. Hier haben Sie die Möglichkeit, den Namen, das Geburtsdatum, das Sterbedatum und zusätzliche Informationen z.B. eine lustige Anekdote oder eine kleine Geschichte anzugeben. Diese Daten werden sicher in der Datenbank gespeichert.
 
-### Erweiterungsmöglichkeiten
+![image](https://github.com/user-attachments/assets/c78c5efb-debd-4f9a-880d-3c20bf6f14c0)
+
+Nach der Eingabe der Daten gelangen Sie zum Friedhof. Hier werden die eingegebenen Informationen visuell in Form von Grabsteinen dargestellt. Jeder Grabstein repräsentiert eine verstorbene Person. Durch Klicken auf einen Grabstein können Sie die Details der betreffenden Person anzeigen lassen. Die Benutzeroberfläche ist so gestaltet, dass Sie einfach und intuitiv durch die Darstellung navigieren können.
+
+![image](https://github.com/user-attachments/assets/4793f61f-82f9-48b0-b20f-6ecbe4d08556)
+
+
+## Klassendiagramm
+
+![image](https://github.com/user-attachments/assets/2bbdf0b5-35df-4635-86f1-940db0b51848)
+
+
+## Erweiterungsmöglichkeiten
+- Anzahl der Grabsteine erhöhen
+- Möglichkeit eigene Daten zu bearbeiten oder zu löschen
 - Benachrichtigungen für Gedenktage
 - Suchfunktion nach verstorbenen Personen
 - Verknüpfung mit anderen verstorbenen Personen
