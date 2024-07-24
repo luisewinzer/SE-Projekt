@@ -1,0 +1,104 @@
+@startuml
+
+left to right direction
+
+class Login {
+    - TxtUsername: TextBox
+    - TxtPassword: TextBox
+    - CbShowPassword: CheckBox
+    - con : OleDbConnection
+    - cmd : OleDbCommand
+    - da : OleDbDataAdapter
+    --
+    + Login()
+    + BtnLogin_Click(object sender, EventArgs e)
+    + CbShowPassword_CheckedChanged(object sender, EventArgs e)
+    + LblCreateAccount_Click(object sender, EventArgs e)
+    + BtnExit_Click(object sender, EventArgs e)
+}
+
+class Registration {
+    - TxtUsername: TextBox
+    - TxtPassword: TextBox
+    - TxtConPassword: TextBox
+    - CbShowPassword: CheckBox
+    - con : OleDbConnection
+    - cmd : OleDbCommand
+    - da : OleDbDataAdapter
+    --
+    + Registration()
+    + BtnRegister_Click(object sender, EventArgs e)
+    + CbShowPassword_CheckedChanged(object sender, EventArgs e)
+    + LblBackToLogin_Click(object sender, EventArgs e)
+    + BtnExit_Click(object sender, EventArgs e)
+}
+
+class WelcomePage {
+    - username: string
+    - LblUsername: Label
+    --
+    + WelcomePage(string username)
+    + DisplayUsername() : void
+    + LblDataRequest_Click(object sender, EventArgs e) : void
+    + LblGraveyard_Click(object sender, EventArgs e) : void
+    + BtnLogOut_Click(object sender, EventArgs e) : void
+    + BtnExit_Click(object sender, EventArgs e) : void
+}
+
+
+class DataRequest {
+    - username : string
+    - LblUsername : Label
+    - con : OleDbConnection
+    - cmd : OleDbCommand
+    - da : OleDbDataAdapter
+    --
+    + DataRequest(string username)
+    + DisplayUsername() : void
+    + InitializeDateValidation() : void
+    + InitializeNameValidation() : void
+    + DateValidation(object sender, EventArgs e) : void
+    + IsValidDate(string date) : bool
+    + BtnSave_Click(object sender, EventArgs e) : void
+    + BtnLogOut_Click(object sender, EventArgs e) : void
+    + BtnExit_Click(object sender, EventArgs e) : void
+    + BtnHome_Click(object sender, EventArgs e) : void
+    + BtnData_Click(object sender, EventArgs e) : void
+    + BtnGrave_Click(object sender, EventArgs e) : void
+}
+
+class Graveyard {
+    - username : string
+    - LblUsername : Label
+    - infoWindow : InfoWindow
+    - tombstoneToolTip : ToolTip
+    --
+    + Graveyard(string username)
+    + DisplayUsername() : void
+    + DisplayDeceasedPersonInfo(int id, PictureBox tombstone) : void
+    + InsertLineBreaks(string text, int maxLineLength) : string
+    + InitializeTombstones() : void
+    + Tombstone_MouseHover(object sender, EventArgs e) : void
+    + Tombstone_MouseLeave(object sender, EventArgs e) : void
+    + BtnLogOut_Click(object sender, EventArgs e) : void
+    + BtnExit_Click(object sender, EventArgs e) : void
+    + BtnHome_Click(object sender, EventArgs e) : void
+    + BtnData_Click(object sender, EventArgs e) : void
+    + BtnGrave_Click(object sender, EventArgs e) : void
+}
+
+class InfoWindow {
++ InfoWindow(string info)
+}
+
+Login <--> Registration : Data Exchange: DbUsers
+Login --> WelcomePage : Shows
+WelcomePage --> DataRequest : Shows
+WelcomePage --> Graveyard : Shows
+DataRequest <--> Graveyard : Data Exchange: DbDeceased
+DataRequest --> WelcomePage : Navigates
+Graveyard --> WelcomePage : Navigates
+Graveyard --> InfoWindow : Displays
+Graveyard --> DataRequest : Navigates
+
+@enduml
