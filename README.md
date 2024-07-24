@@ -6,7 +6,7 @@ Die vorliegende GUI simuliert einen Friedhof und stellt verschiedene Funktionen 
 
 
 <p align="center">
-  <img src="![image](https://github.com/user-attachments/assets/074c440d-ce16-4d40-ae0d-20aeea29d4f0)" />
+  <img src="https://github.com/user-attachments/assets/074c440d-ce16-4d40-ae0d-20aeea29d4f0" />
 </p>
 
 ---
