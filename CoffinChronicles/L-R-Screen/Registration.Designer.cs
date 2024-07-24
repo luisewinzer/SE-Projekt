@@ -41,6 +41,7 @@
             this.LblChronicles = new System.Windows.Forms.Label();
             this.LblCoffin = new System.Windows.Forms.Label();
             this.IconCC = new System.Windows.Forms.PictureBox();
+            this.BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IconCC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,12 +192,27 @@
             this.IconCC.TabIndex = 17;
             this.IconCC.TabStop = false;
             // 
+            // BtnExit
+            // 
+            this.BtnExit.BackColor = System.Drawing.Color.Transparent;
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.ForeColor = System.Drawing.Color.Gray;
+            this.BtnExit.Location = new System.Drawing.Point(254, 0);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(31, 31);
+            this.BtnExit.TabIndex = 31;
+            this.BtnExit.Text = "X";
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(285, 544);
+            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnRegister);
             this.Controls.Add(this.CbShowPassword);
             this.Controls.Add(this.TxtConPassword);
@@ -237,6 +253,7 @@
         private System.Windows.Forms.Label LblChronicles;
         private System.Windows.Forms.Label LblCoffin;
         private System.Windows.Forms.PictureBox IconCC;
+        private System.Windows.Forms.Button BtnExit;
     }
 }
 
