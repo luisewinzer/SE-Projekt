@@ -8,12 +8,15 @@ namespace L_R_Screen
     {
         private string username;
         private Label LblUsername;
+        private Label LblWelcomeMessage;
 
         public WelcomePage(string username)
         {
             InitializeComponent();
             this.username = username;
             DisplayUsername();
+            DisplayWelcomeMessage();
+            this.Resize += new EventHandler(WelcomePage_Resize);
         }
 
         private void DisplayUsername()
@@ -26,8 +29,37 @@ namespace L_R_Screen
                 BackColor = Color.Gainsboro,
                 Font = new Font(FontFamily.GenericSansSerif, 8f, FontStyle.Regular)
             };
-            this.Controls.Add(LblUsername);
             PnlTop.Controls.Add(LblUsername);
+        }
+
+        private void DisplayWelcomeMessage()
+        {
+            LblWelcomeMessage = new Label
+            {
+                Text = $"Willkommen bei Coffin Chronicles, {username}!",
+                AutoSize = true,
+                BackColor = Color.White,
+                Font = new Font(FontFamily.GenericSansSerif, 12f, FontStyle.Bold)
+            };
+
+            PnlMiddle.Controls.Add(LblWelcomeMessage);
+            CenterWelcomeMessage();
+        }
+
+        private void CenterWelcomeMessage()
+        {
+            if (LblWelcomeMessage != null && PnlMiddle != null)
+            {
+                int xPosition = (PnlMiddle.Width - LblWelcomeMessage.Width) / 2;
+                int yPosition = 35;
+                LblWelcomeMessage.Location = new Point(xPosition, yPosition);
+                LblWelcomeMessage.BringToFront();
+            }
+        }
+
+        private void WelcomePage_Resize(object sender, EventArgs e)
+        {
+            CenterWelcomeMessage();
         }
 
         private void BtnLogOut_Click(object sender, EventArgs e)
