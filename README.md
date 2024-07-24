@@ -9,11 +9,9 @@
     (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der 
     Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
   </p>
+  
+  <img src="https://github.com/user-attachments/assets/17d5e89c-b633-41d2-b7d7-a6959601eaff" alt="Image Description" />
 </div>
-
-<p align="center"> 
-  <img src="https://github.com/user-attachments/assets/17d5e89c-b633-41d2-b7d7-a6959601eaff" />
-</p>
 
 ---
 
