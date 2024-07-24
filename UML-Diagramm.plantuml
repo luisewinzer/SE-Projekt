@@ -36,9 +36,12 @@ class Registration {
 class WelcomePage {
     - username: string
     - LblUsername: Label
+    - LblWelcomeMessage: Label
     --
     + WelcomePage(string username)
     + DisplayUsername() : void
+    + DisplayWelcomeMessage() : void
+    + CenterWelcomeMessage() : vpid
     + LblDataRequest_Click(object sender, EventArgs e) : void
     + LblGraveyard_Click(object sender, EventArgs e) : void
     + BtnLogOut_Click(object sender, EventArgs e) : void
@@ -55,7 +58,6 @@ class DataRequest {
     --
     + DataRequest(string username)
     + DisplayUsername() : void
-    + InitializeDateValidation() : void
     + InitializeNameValidation() : void
     + DateValidation(object sender, EventArgs e) : void
     + IsValidDate(string date) : bool
