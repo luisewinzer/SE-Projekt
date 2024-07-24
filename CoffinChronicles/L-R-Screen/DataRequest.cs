@@ -17,7 +17,6 @@ namespace L_R_Screen
             InitializeComponent();
             this.username = username;
             DisplayUsername();
-            InitializeDateValidation();
             InitializeNameValidation();
         }
 
@@ -41,49 +40,24 @@ namespace L_R_Screen
             PnlTop.Controls.Add(LblUsername);
         }
 
-        private void InitializeDateValidation()
-        {
-            MtxtBirthdate.Leave += new EventHandler(DateValidation);
-            MtxtDeathdate.Leave += new EventHandler(DateValidation);
-        }
-
         private void InitializeNameValidation()
         {
-            TxtName.MaxLength = 50; // Maximale Länge der Namen festlegen
+            TxtName.MaxLength = 60; // Maximale Länge der Namen festlegen
         }
 
-        private void DateValidation(object sender, EventArgs e)
+        private static bool IsValidDate(string date1, string date2)
         {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            if (textBox != null && !string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                if (!IsValidDate(textBox.Text))
-                {
-                    MessageBox.Show("Bitte geben Sie ein gültiges Datum im Format dd.mm.yyyy ein (z.B. 31.12.2000). Das Datum darf nicht in der Zukunft liegen.", "Ungültiges Datum", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox.Focus();
-                    textBox.SelectAll();
-                }
-            }
-        }
-
-        private bool IsValidDate(string date)
-        {
-            // Regex für das Datum im Format dd.mm.yyyy
+            // Regex für das Datum im Format dd.MM.yyyy
             string pattern = @"^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19[0-9]{2}|20[0-4][0-9]|2050)$";
-            if (Regex.IsMatch(date, pattern))
+            if (Regex.IsMatch(date1, pattern) && Regex.IsMatch(date2, pattern))
             {
                 // Überprüfen, ob das Datum gültig ist und nicht in der Zukunft liegt
-                try
+                if (DateTime.TryParseExact(date1, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate1) && DateTime.TryParseExact(date2, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate2))
                 {
-                    DateTime parsedDate = DateTime.ParseExact(date, "dd.mm.yyyy", CultureInfo.InvariantCulture);
-                    if (parsedDate <= DateTime.Now)
+                    if (parsedDate1 <= DateTime.Now && parsedDate2 <= DateTime.Now && parsedDate1 < parsedDate2)
                     {
                         return true;
                     }
-                }
-                catch (FormatException)
-                {
-                    return false;
                 }
             }
             return false;
@@ -96,40 +70,42 @@ namespace L_R_Screen
                 MessageBox.Show("Bitte füllen Sie alle Felder aus", "Speichern fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            if (!IsValidDate(MtxtBirthdate.Text) || !IsValidDate(MtxtDeathdate.Text))
+            else if (!IsValidDate(MtxtBirthdate.Text, MtxtDeathdate.Text))
             {
-                MessageBox.Show("Bitte geben Sie gültige Daten im Format dd.mm.yyyy ein. Die Daten dürfen nicht in der Zukunft liegen.", "Speichern fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bitte geben Sie gültige Daten im Format dd.mm.yyyy ein. Die Daten dürfen nicht in der Zukunft liegen und das Sterbedatum darf nicht vor dem Geburtsdatum liegen.", "Speichern fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            try
+            else
             {
-                con.Open();
+                try
+                {
+                    con.Open();
 
-                // SQL-Insert-Befehl, um neuen Verstorbenen hinzuzufügen
-                string register = "INSERT INTO [TblDeceased] ([name], [birthdate], [deathdate], [information]) VALUES (?, ?, ?, ?)";
-                cmd = new OleDbCommand(register, con);
-                cmd.Parameters.AddWithValue("@name", TxtName.Text);
-                cmd.Parameters.AddWithValue("@birthdate", MtxtBirthdate.Text);
-                cmd.Parameters.AddWithValue("@deathdate", MtxtDeathdate.Text);
-                cmd.Parameters.AddWithValue("@information", TxtInformation.Text);
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    // SQL-Insert-Befehl, um neuen Verstorbenen hinzuzufügen
+                    string register = "INSERT INTO [TblDeceased] ([name], [birthdate], [deathdate], [information]) VALUES (?, ?, ?, ?)";
+                    cmd = new OleDbCommand(register, con);
+                    cmd.Parameters.AddWithValue("@name", TxtName.Text);
+                    cmd.Parameters.AddWithValue("@birthdate", MtxtBirthdate.Text);
+                    cmd.Parameters.AddWithValue("@deathdate", MtxtDeathdate.Text);
+                    cmd.Parameters.AddWithValue("@information", TxtInformation.Text);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                // Zurücksetzen der Eingabefelder
-                TxtName.Text = "";
-                MtxtBirthdate.Text = "";
-                MtxtDeathdate.Text = "";
-                TxtInformation.Text = "";
+                    // Zurücksetzen der Eingabefelder
+                    TxtName.Text = "";
+                    MtxtBirthdate.Text = "";
+                    MtxtDeathdate.Text = "";
+                    TxtInformation.Text = "";
 
-                MessageBox.Show("Daten erfolgreich gespeichert", "Speichern erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Daten erfolgreich gespeichert", "Speichern erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fehler: " + ex.Message, "Speichern fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    con.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Fehler: " + ex.Message, "Speichern fehlgeschlagen", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                con.Close();
-            }
+            
         }
 
         private void BtnLogOut_Click(object sender, EventArgs e)

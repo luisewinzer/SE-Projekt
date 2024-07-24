@@ -75,5 +75,10 @@ namespace L_R_Screen
             new Registration().Show();
             this.Hide();
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

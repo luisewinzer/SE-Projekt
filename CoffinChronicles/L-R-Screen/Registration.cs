@@ -66,6 +66,8 @@ namespace L_R_Screen
                     TxtConPassword.Text = "";
 
                     MessageBox.Show("Account erfolgreich erstellt", "Registrierung erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new Login().Show();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
@@ -101,6 +103,11 @@ namespace L_R_Screen
         {
             new Login().Show();
             this.Hide();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
