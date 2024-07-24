@@ -10,6 +10,14 @@ Die GUI wird für Angehörige von Verstorbenen erstellt und geht den zentralen F
 (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der 
 Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
 
+
+## Verwendete Technologien
+- Grafische Benutzeroberfläche: Windows Forms
+- Programmiersprache: C#
+- Framework: .NET
+- Datenbankanwendung: Microsoft Access
+
+
 ## Funktionalitäten
 **Login-Registration-Screen**
 - Ermöglicht Benutzern, sich anzumelden oder ein neues Konto zu erstellen.
@@ -59,3 +67,7 @@ Nach der Eingabe der Daten gelangen Sie zum Friedhof. Hier werden die eingegeben
 - Suchfunktion nach verstorbenen Personen
 - Verknüpfung mit anderen verstorbenen Personen
 - Grabpflege: digitale Kerze anzünden, Blumen ablegen
+
+
+## Noch Fragen oder Anmerkungen?
+Kontaktieren Sie uns gern direkt oder erstellen Sie ein Issue.
