@@ -1,7 +1,6 @@
-# Projekt Softwareentwicklung
-## Digital Cemetery _Coffin Chronicles_
+# Digital Cemetery _Coffin Chronicles_
 
-### Kurzbeschreibung
+# Kurzbeschreibung
 Die vorliegende GUI simuliert einen Friedhof und stellt verschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereit. 
 Die GUI wird für Angehörige von Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod 
 (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der 
@@ -11,9 +10,8 @@ Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Verge
   <img src="https://github.com/user-attachments/assets/17d5e89c-b633-41d2-b7d7-a6959601eaff" />
 </p>
 
----
 
-### Funktionalitäten
+## Funktionalitäten
 **Login-Registration-Screen**
 - Ermöglicht Benutzern, sich anzumelden oder ein neues Konto zu erstellen.
 - Schützt sensible Daten durch Authentifizierung.
@@ -33,22 +31,19 @@ Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Verge
 - Visuelle Darstellung der gespeicherten Daten in Form von Grabsteinen.
 - Benutzer können auf einen Grabstein klicken, um die Details des Verstorbenen anzuzeigen.
 - Einfache Navigation und Bedienung durch eine benutzerfreundliche Oberfläche.
-  
----
 
-### Anleitung und Verwendungshinweise
+
+## Anleitung und Verwendungshinweise
 
 ...
 
----
 
-### Klassendiagramm
+## Klassendiagramm
 
 ![image](https://github.com/user-attachments/assets/2bbdf0b5-35df-4635-86f1-940db0b51848)
 
----
 
-### Erweiterungsmöglichkeiten
+## Erweiterungsmöglichkeiten
 - Anzahl der Grabsteine erhöhen
 - Möglichkeit eigene Daten zu bearbeiten oder zu löschen
 - Benachrichtigungen für Gedenktage
