@@ -1,15 +1,16 @@
-# Digital Cemetery _Coffin Chronicles_
+<div style="text-align: center;">
+  <h1>Digital Cemetery _Coffin Chronicles_</h1>
+  
+  <p>
+    <img src="https://github.com/user-attachments/assets/17d5e89c-b633-41d2-b7d7-a6959601eaff" alt="Image Description" />
+  </p>
+</div>
 
-# Kurzbeschreibung
+## Kurzbeschreibung
 Die vorliegende GUI simuliert einen Friedhof und stellt verschiedene Funktionen zur Interaktion (vgl. Funktionalitäten) bereit. 
 Die GUI wird für Angehörige von Verstorbenen erstellt und geht den zentralen Fragen nach: Wie können wir als Gesellschaft den Tod 
 (als unvermeidbares Ende eines jeden Lebens) besser in das "lebendige" Leben integrieren? Wie können wir Angehörige bei der 
 Trauerbewältigung unterstützen und wie geraten die Verstorbenen nicht in Vergessenheit?
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/17d5e89c-b633-41d2-b7d7-a6959601eaff" />
-</p>
-
 
 ## Funktionalitäten
 **Login-Registration-Screen**
