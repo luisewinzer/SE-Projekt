@@ -51,7 +51,7 @@ namespace L_R_Screen
             if (Regex.IsMatch(date1, pattern) && Regex.IsMatch(date2, pattern))
             {
                 // Überprüfen, ob das Datum gültig ist und nicht in der Zukunft liegt
-                if (DateTime.TryParseExact(date1, "dd.mm.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate1) && DateTime.TryParseExact(date2, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate2))
+                if (DateTime.TryParseExact(date1, "dd.mm.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate1) && DateTime.TryParseExact(date2, "dd.mm.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate2))
                 {
                     if (parsedDate1 <= DateTime.Now && parsedDate2 <= DateTime.Now && parsedDate1 < parsedDate2)
                     {
@@ -97,6 +97,11 @@ namespace L_R_Screen
                     TxtInformation.Text = "";
 
                     MessageBox.Show("Daten erfolgreich gespeichert", "Speichern erfolgreich", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Weiterleiten zur Graveyard-Seite
+                    Graveyard graveyard = new Graveyard(username);
+                    graveyard.Show();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -104,7 +109,7 @@ namespace L_R_Screen
                     con.Close();
                 }
             }
-            
+
         }
 
         private void BtnLogOut_Click(object sender, EventArgs e)
