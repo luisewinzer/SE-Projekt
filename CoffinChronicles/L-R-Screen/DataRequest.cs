@@ -25,7 +25,6 @@ namespace L_R_Screen
         OleDbCommand cmd = new OleDbCommand();
         OleDbDataAdapter da = new OleDbDataAdapter();
 
-        // Anzeigen des Benutzernamens in der oberen Leiste
         private void DisplayUsername()
         {
             LblUsername = new Label
@@ -42,17 +41,17 @@ namespace L_R_Screen
 
         private void InitializeNameValidation()
         {
-            TxtName.MaxLength = 45; // Maximale Länge der Namen festlegen
+            TxtName.MaxLength = 45;
         }
 
         private static bool IsValidDate(string date1, string date2)
         {
-            // Regex für das Datum im Format dd.MM.yyyy
+            // Regex für das Datum im Format dd.mm.yyyy
             string pattern = @"^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19[0-9]{2}|20[0-4][0-9]|2050)$";
             if (Regex.IsMatch(date1, pattern) && Regex.IsMatch(date2, pattern))
             {
                 // Überprüfen, ob das Datum gültig ist und nicht in der Zukunft liegt
-                if (DateTime.TryParseExact(date1, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate1) && DateTime.TryParseExact(date2, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate2))
+                if (DateTime.TryParseExact(date1, "dd.mm.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate1) && DateTime.TryParseExact(date2, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate2))
                 {
                     if (parsedDate1 <= DateTime.Now && parsedDate2 <= DateTime.Now && parsedDate1 < parsedDate2)
                     {
