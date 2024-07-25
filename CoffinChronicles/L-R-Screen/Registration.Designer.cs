@@ -54,7 +54,7 @@
             this.BtnRegister.Location = new System.Drawing.Point(36, 433);
             this.BtnRegister.Name = "BtnRegister";
             this.BtnRegister.Size = new System.Drawing.Size(216, 32);
-            this.BtnRegister.TabIndex = 29;
+            this.BtnRegister.TabIndex = 5;
             this.BtnRegister.Text = "Registrieren";
             this.BtnRegister.UseVisualStyleBackColor = false;
             this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
@@ -69,7 +69,7 @@
             this.CbShowPassword.Location = new System.Drawing.Point(132, 391);
             this.CbShowPassword.Name = "CbShowPassword";
             this.CbShowPassword.Size = new System.Drawing.Size(120, 17);
-            this.CbShowPassword.TabIndex = 28;
+            this.CbShowPassword.TabIndex = 4;
             this.CbShowPassword.Text = "Passwort anzeigen";
             this.CbShowPassword.UseVisualStyleBackColor = true;
             this.CbShowPassword.CheckedChanged += new System.EventHandler(this.CbShowPassword_CheckedChanged);
@@ -85,7 +85,7 @@
             this.TxtConPassword.Name = "TxtConPassword";
             this.TxtConPassword.PasswordChar = '•';
             this.TxtConPassword.Size = new System.Drawing.Size(216, 31);
-            this.TxtConPassword.TabIndex = 27;
+            this.TxtConPassword.TabIndex = 3;
             // 
             // TxtPassword
             // 
@@ -98,7 +98,7 @@
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '•';
             this.TxtPassword.Size = new System.Drawing.Size(216, 31);
-            this.TxtPassword.TabIndex = 26;
+            this.TxtPassword.TabIndex = 2;
             // 
             // TxtUsername
             // 
@@ -110,7 +110,7 @@
             this.TxtUsername.Multiline = true;
             this.TxtUsername.Name = "TxtUsername";
             this.TxtUsername.Size = new System.Drawing.Size(216, 31);
-            this.TxtUsername.TabIndex = 25;
+            this.TxtUsername.TabIndex = 1;
             // 
             // LblBackToLogin
             // 
@@ -121,7 +121,7 @@
             this.LblBackToLogin.Location = new System.Drawing.Point(78, 478);
             this.LblBackToLogin.Name = "LblBackToLogin";
             this.LblBackToLogin.Size = new System.Drawing.Size(127, 13);
-            this.LblBackToLogin.TabIndex = 24;
+            this.LblBackToLogin.TabIndex = 6;
             this.LblBackToLogin.Text = "Zurück zur Anmeldung";
             this.LblBackToLogin.Click += new System.EventHandler(this.LblBackToLogin_Click);
             // 
@@ -131,7 +131,7 @@
             this.LblConPassword.Location = new System.Drawing.Point(32, 332);
             this.LblConPassword.Name = "LblConPassword";
             this.LblConPassword.Size = new System.Drawing.Size(143, 17);
-            this.LblConPassword.TabIndex = 23;
+            this.LblConPassword.TabIndex = 0;
             this.LblConPassword.Text = "Passwort wiederholen";
             // 
             // LblPassword
@@ -140,7 +140,7 @@
             this.LblPassword.Location = new System.Drawing.Point(32, 266);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(63, 17);
-            this.LblPassword.TabIndex = 22;
+            this.LblPassword.TabIndex = 0;
             this.LblPassword.Text = "Passwort";
             // 
             // LblUsername
@@ -149,7 +149,7 @@
             this.LblUsername.Location = new System.Drawing.Point(32, 199);
             this.LblUsername.Name = "LblUsername";
             this.LblUsername.Size = new System.Drawing.Size(96, 17);
-            this.LblUsername.TabIndex = 21;
+            this.LblUsername.TabIndex = 0;
             this.LblUsername.Text = "Benutzername";
             // 
             // LblRegistration
@@ -159,7 +159,7 @@
             this.LblRegistration.Location = new System.Drawing.Point(86, 153);
             this.LblRegistration.Name = "LblRegistration";
             this.LblRegistration.Size = new System.Drawing.Size(113, 21);
-            this.LblRegistration.TabIndex = 20;
+            this.LblRegistration.TabIndex = 0;
             this.LblRegistration.Text = "Registrierung";
             // 
             // LblChronicles
@@ -169,7 +169,7 @@
             this.LblChronicles.Location = new System.Drawing.Point(129, 106);
             this.LblChronicles.Name = "LblChronicles";
             this.LblChronicles.Size = new System.Drawing.Size(87, 16);
-            this.LblChronicles.TabIndex = 19;
+            this.LblChronicles.TabIndex = 0;
             this.LblChronicles.Text = "Chronicles";
             // 
             // LblCoffin
@@ -179,7 +179,7 @@
             this.LblCoffin.Location = new System.Drawing.Point(68, 106);
             this.LblCoffin.Name = "LblCoffin";
             this.LblCoffin.Size = new System.Drawing.Size(55, 16);
-            this.LblCoffin.TabIndex = 18;
+            this.LblCoffin.TabIndex = 0;
             this.LblCoffin.Text = "Coffin";
             // 
             // IconCC
@@ -189,7 +189,7 @@
             this.IconCC.Name = "IconCC";
             this.IconCC.Size = new System.Drawing.Size(163, 68);
             this.IconCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IconCC.TabIndex = 17;
+            this.IconCC.TabIndex = 0;
             this.IconCC.TabStop = false;
             // 
             // BtnExit
@@ -201,7 +201,7 @@
             this.BtnExit.Location = new System.Drawing.Point(254, 0);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(31, 31);
-            this.BtnExit.TabIndex = 31;
+            this.BtnExit.TabIndex = 7;
             this.BtnExit.Text = "X";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);

@@ -67,7 +67,7 @@
             this.BtnExit.Location = new System.Drawing.Point(785, 0);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(31, 31);
-            this.BtnExit.TabIndex = 0;
+            this.BtnExit.TabIndex = 4;
             this.BtnExit.Text = "X";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
@@ -79,7 +79,7 @@
             this.BtnLogOut.Location = new System.Drawing.Point(702, 5);
             this.BtnLogOut.Name = "BtnLogOut";
             this.BtnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.BtnLogOut.TabIndex = 0;
+            this.BtnLogOut.TabIndex = 3;
             this.BtnLogOut.Text = "Abmelden";
             this.BtnLogOut.UseVisualStyleBackColor = true;
             this.BtnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
@@ -91,7 +91,7 @@
             this.PnlBottom.Location = new System.Drawing.Point(0, 458);
             this.PnlBottom.Name = "PnlBottom";
             this.PnlBottom.Size = new System.Drawing.Size(816, 31);
-            this.PnlBottom.TabIndex = 1;
+            this.PnlBottom.TabIndex = 0;
             // 
             // PnlMiddle
             // 
@@ -106,7 +106,7 @@
             this.PnlMiddle.Location = new System.Drawing.Point(0, 31);
             this.PnlMiddle.Name = "PnlMiddle";
             this.PnlMiddle.Size = new System.Drawing.Size(816, 427);
-            this.PnlMiddle.TabIndex = 3;
+            this.PnlMiddle.TabIndex = 0;
             // 
             // LblGraveyard
             // 
@@ -117,7 +117,7 @@
             this.LblGraveyard.Location = new System.Drawing.Point(333, 394);
             this.LblGraveyard.Name = "LblGraveyard";
             this.LblGraveyard.Size = new System.Drawing.Size(162, 13);
-            this.LblGraveyard.TabIndex = 39;
+            this.LblGraveyard.TabIndex = 2;
             this.LblGraveyard.Text = "Weiter zum digitalen Friedhof";
             this.LblGraveyard.Click += new System.EventHandler(this.LblGraveyard_Click);
             // 
@@ -129,7 +129,7 @@
             this.TxtInfo3.Multiline = true;
             this.TxtInfo3.Name = "TxtInfo3";
             this.TxtInfo3.Size = new System.Drawing.Size(473, 35);
-            this.TxtInfo3.TabIndex = 38;
+            this.TxtInfo3.TabIndex = 0;
             this.TxtInfo3.Text = "Über den Button \"Weiter zum digitalen Friedhof\" gelangen Sie direkt zur interakti" +
     "ven Gedenkseite.";
             this.TxtInfo3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -142,7 +142,7 @@
             this.TxtInfo2.Multiline = true;
             this.TxtInfo2.Name = "TxtInfo2";
             this.TxtInfo2.Size = new System.Drawing.Size(473, 60);
-            this.TxtInfo2.TabIndex = 37;
+            this.TxtInfo2.TabIndex = 0;
             this.TxtInfo2.Text = "Über den Button \"Weiter zur Dateneingabe\" können Sie als Angehöriger Informatione" +
     "n über die verstorbene Person mit uns teilen, die wir auf unserer interaktiven G" +
     "edenkseite für Sie aufbereiten.";
@@ -156,7 +156,7 @@
             this.TxtInfo1.Multiline = true;
             this.TxtInfo1.Name = "TxtInfo1";
             this.TxtInfo1.Size = new System.Drawing.Size(473, 79);
-            this.TxtInfo1.TabIndex = 36;
+            this.TxtInfo1.TabIndex = 0;
             this.TxtInfo1.Text = resources.GetString("TxtInfo1.Text");
             this.TxtInfo1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -169,7 +169,7 @@
             this.LblDataRequest.Location = new System.Drawing.Point(345, 319);
             this.LblDataRequest.Name = "LblDataRequest";
             this.LblDataRequest.Size = new System.Drawing.Size(136, 13);
-            this.LblDataRequest.TabIndex = 35;
+            this.LblDataRequest.TabIndex = 1;
             this.LblDataRequest.Text = "Weiter zur Dateneingabe";
             this.LblDataRequest.Click += new System.EventHandler(this.LblDataRequest_Click);
             // 
@@ -180,7 +180,7 @@
             this.LblChronicles.Location = new System.Drawing.Point(394, 128);
             this.LblChronicles.Name = "LblChronicles";
             this.LblChronicles.Size = new System.Drawing.Size(87, 16);
-            this.LblChronicles.TabIndex = 34;
+            this.LblChronicles.TabIndex = 0;
             this.LblChronicles.Text = "Chronicles";
             // 
             // LblCoffin
@@ -190,7 +190,7 @@
             this.LblCoffin.Location = new System.Drawing.Point(333, 128);
             this.LblCoffin.Name = "LblCoffin";
             this.LblCoffin.Size = new System.Drawing.Size(55, 16);
-            this.LblCoffin.TabIndex = 33;
+            this.LblCoffin.TabIndex = 0;
             this.LblCoffin.Text = "Coffin";
             // 
             // IconCC
@@ -200,7 +200,7 @@
             this.IconCC.Name = "IconCC";
             this.IconCC.Size = new System.Drawing.Size(163, 68);
             this.IconCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.IconCC.TabIndex = 32;
+            this.IconCC.TabIndex = 0;
             this.IconCC.TabStop = false;
             // 
             // WelcomePage
