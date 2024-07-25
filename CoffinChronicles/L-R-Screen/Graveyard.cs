@@ -65,7 +65,7 @@ namespace L_R_Screen
                     {
                         Label LblName = new Label
                         {
-                            Text = InsertLineBreaks($"{name}", 14),
+                            Text = InsertLineBreaks($"{name}", 12),
                             Location = new Point(tombstone.Location.X + 23, tombstone.Location.Y + 35),
                             AutoSize = true,
                             BackColor = Color.DarkGray,
