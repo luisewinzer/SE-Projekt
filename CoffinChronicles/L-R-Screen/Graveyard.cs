@@ -95,7 +95,7 @@ namespace L_R_Screen
                         PnlMiddle.Controls.Add(LblBirthdate);
                         PnlMiddle.Controls.Add(LblDeathdate);
 
-                        //Verschiebt Automatisch die Labels LblBirthdate und LblDeathdate unter LblName
+                        // Verschiebt automatisch die Labels LblBirthdate und LblDeathdate unter LblName
                         LblBirthdate.Location = new Point(LblName.Location.X, LblName.Location.Y + LblName.Height + 10);
                         LblDeathdate.Location = new Point(LblBirthdate.Location.X, LblBirthdate.Location.Y + LblBirthdate.Height + 10);
 
@@ -121,7 +121,7 @@ namespace L_R_Screen
             }
         }
 
-        //Fügt Automatischen einen Umbruch ein wenn eine maximale Länge an Zeichen erreicht wurde
+        // Fügt automatisch einen Umbruch ein, wenn eine maximale Länge an Zeichen erreicht wurde
         public string InsertLineBreaks(string text, int maxLineLength)
         {
             if (string.IsNullOrEmpty(text) || maxLineLength <= 0)
