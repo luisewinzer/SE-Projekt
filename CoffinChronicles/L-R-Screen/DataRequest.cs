@@ -42,7 +42,7 @@ namespace L_R_Screen
 
         private void InitializeNameValidation()
         {
-            TxtName.MaxLength = 60; // Maximale Länge der Namen festlegen
+            TxtName.MaxLength = 45; // Maximale Länge der Namen festlegen
         }
 
         private static bool IsValidDate(string date1, string date2)
