@@ -16,6 +16,7 @@ namespace L_R_Screen
             this.username = username;
             DisplayUsername();
             DisplayWelcomeMessage();
+            this.Activated += new EventHandler(WelcomePage_Activated);
             this.Resize += new EventHandler(WelcomePage_Resize);
         }
 
@@ -55,6 +56,12 @@ namespace L_R_Screen
                 LblWelcomeMessage.Location = new Point(xPosition, yPosition);
                 LblWelcomeMessage.BringToFront();
             }
+        }
+
+        private void WelcomePage_Activated(object sender, EventArgs e)
+        {
+            // Verwendet BeginInvoke, um sicherzustellen, dass der Fokus nach der Initialisierung gesetzt wird (Fokus andernfalls auf TxtInfo1)
+            this.BeginInvoke((Action)(() => BtnExit.Focus()));
         }
 
         private void WelcomePage_Resize(object sender, EventArgs e)
