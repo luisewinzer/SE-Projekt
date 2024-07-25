@@ -78,7 +78,7 @@ namespace L_R_Screen
             this.BtnExit.Location = new System.Drawing.Point(785, 0);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(31, 31);
-            this.BtnExit.TabIndex = 0;
+            this.BtnExit.TabIndex = 10;
             this.BtnExit.Text = "X";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
@@ -90,7 +90,7 @@ namespace L_R_Screen
             this.BtnLogOut.Location = new System.Drawing.Point(702, 5);
             this.BtnLogOut.Name = "BtnLogOut";
             this.BtnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.BtnLogOut.TabIndex = 0;
+            this.BtnLogOut.TabIndex = 9;
             this.BtnLogOut.Text = "Abmelden";
             this.BtnLogOut.UseVisualStyleBackColor = true;
             this.BtnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
@@ -105,7 +105,7 @@ namespace L_R_Screen
             this.PnlBottom.Location = new System.Drawing.Point(0, 458);
             this.PnlBottom.Name = "PnlBottom";
             this.PnlBottom.Size = new System.Drawing.Size(816, 31);
-            this.PnlBottom.TabIndex = 1;
+            this.PnlBottom.TabIndex = 0;
             // 
             // BtnGrave
             // 
@@ -115,9 +115,9 @@ namespace L_R_Screen
             this.BtnGrave.Name = "BtnGrave";
             this.BtnGrave.Size = new System.Drawing.Size(31, 31);
             this.BtnGrave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnGrave.TabIndex = 8;
             this.BtnGrave.TabStop = false;
             this.BtnGrave.Click += new System.EventHandler(this.BtnGrave_Click);
+            this.BtnGrave.TabIndex = 8;
             // 
             // BtnHome
             // 
@@ -127,9 +127,9 @@ namespace L_R_Screen
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(31, 31);
             this.BtnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnHome.TabIndex = 7;
             this.BtnHome.TabStop = false;
             this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            this.BtnHome.TabIndex = 6;
             // 
             // BtnData
             // 
@@ -139,9 +139,9 @@ namespace L_R_Screen
             this.BtnData.Name = "BtnData";
             this.BtnData.Size = new System.Drawing.Size(30, 31);
             this.BtnData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnData.TabIndex = 6;
             this.BtnData.TabStop = false;
             this.BtnData.Click += new System.EventHandler(this.BtnData_Click);
+            this.BtnData.TabIndex = 7;
             // 
             // PnlMiddle
             // 
@@ -159,7 +159,7 @@ namespace L_R_Screen
             this.PnlMiddle.Location = new System.Drawing.Point(262, 31);
             this.PnlMiddle.Name = "PnlMiddle";
             this.PnlMiddle.Size = new System.Drawing.Size(293, 427);
-            this.PnlMiddle.TabIndex = 2;
+            this.PnlMiddle.TabIndex = 0;
             // 
             // MtxtDeathdate
             // 
@@ -169,7 +169,7 @@ namespace L_R_Screen
             this.MtxtDeathdate.Mask = "00/00/0000";
             this.MtxtDeathdate.Name = "MtxtDeathdate";
             this.MtxtDeathdate.Size = new System.Drawing.Size(216, 18);
-            this.MtxtDeathdate.TabIndex = 0;
+            this.MtxtDeathdate.TabIndex = 3;
             this.MtxtDeathdate.ValidatingType = typeof(System.DateTime);
             // 
             // MtxtBirthdate
@@ -180,7 +180,7 @@ namespace L_R_Screen
             this.MtxtBirthdate.Mask = "00/00/0000";
             this.MtxtBirthdate.Name = "MtxtBirthdate";
             this.MtxtBirthdate.Size = new System.Drawing.Size(216, 18);
-            this.MtxtBirthdate.TabIndex = 1;
+            this.MtxtBirthdate.TabIndex = 2;
             this.MtxtBirthdate.ValidatingType = typeof(System.DateTime);
             // 
             // TxtInformation
@@ -193,7 +193,7 @@ namespace L_R_Screen
             this.TxtInformation.Multiline = true;
             this.TxtInformation.Name = "TxtInformation";
             this.TxtInformation.Size = new System.Drawing.Size(216, 95);
-            this.TxtInformation.TabIndex = 41;
+            this.TxtInformation.TabIndex = 4;
             // 
             // LblInformation
             // 
@@ -202,7 +202,7 @@ namespace L_R_Screen
             this.LblInformation.Location = new System.Drawing.Point(38, 235);
             this.LblInformation.Name = "LblInformation";
             this.LblInformation.Size = new System.Drawing.Size(138, 17);
-            this.LblInformation.TabIndex = 40;
+            this.LblInformation.TabIndex = 0;
             this.LblInformation.Text = "Weitere Informationen";
             // 
             // BtnSave
@@ -214,7 +214,7 @@ namespace L_R_Screen
             this.BtnSave.Location = new System.Drawing.Point(40, 380);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(216, 32);
-            this.BtnSave.TabIndex = 39;
+            this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Speichern";
             this.BtnSave.UseVisualStyleBackColor = false;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -230,7 +230,7 @@ namespace L_R_Screen
             this.TxtName.Multiline = true;
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(216, 29);
-            this.TxtName.TabIndex = 35;
+            this.TxtName.TabIndex = 1;
             // 
             // LblConPassword
             // 
@@ -239,7 +239,7 @@ namespace L_R_Screen
             this.LblConPassword.Location = new System.Drawing.Point(38, 178);
             this.LblConPassword.Name = "LblConPassword";
             this.LblConPassword.Size = new System.Drawing.Size(83, 17);
-            this.LblConPassword.TabIndex = 33;
+            this.LblConPassword.TabIndex = 0;
             this.LblConPassword.Text = "Sterbedatum";
             // 
             // LblPassword
@@ -249,7 +249,7 @@ namespace L_R_Screen
             this.LblPassword.Location = new System.Drawing.Point(37, 121);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(91, 17);
-            this.LblPassword.TabIndex = 32;
+            this.LblPassword.TabIndex = 0;
             this.LblPassword.Text = "Geburtsdatum";
             // 
             // LblName
@@ -259,7 +259,7 @@ namespace L_R_Screen
             this.LblName.Location = new System.Drawing.Point(37, 54);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(124, 17);
-            this.LblName.TabIndex = 31;
+            this.LblName.TabIndex = 0;
             this.LblName.Text = "Vor- und Nachname";
             // 
             // LblInfoDeceased
@@ -269,7 +269,7 @@ namespace L_R_Screen
             this.LblInfoDeceased.Location = new System.Drawing.Point(5, 12);
             this.LblInfoDeceased.Name = "LblInfoDeceased";
             this.LblInfoDeceased.Size = new System.Drawing.Size(285, 20);
-            this.LblInfoDeceased.TabIndex = 30;
+            this.LblInfoDeceased.TabIndex = 0;
             this.LblInfoDeceased.Text = "Informationen zur verstorbenen Person";
             // 
             // PnlRight
@@ -277,14 +277,14 @@ namespace L_R_Screen
             this.PnlRight.Location = new System.Drawing.Point(552, 31);
             this.PnlRight.Name = "PnlRight";
             this.PnlRight.Size = new System.Drawing.Size(264, 427);
-            this.PnlRight.TabIndex = 3;
+            this.PnlRight.TabIndex = 0;
             // 
             // PnlLeft
             // 
             this.PnlLeft.Location = new System.Drawing.Point(0, 31);
             this.PnlLeft.Name = "PnlLeft";
             this.PnlLeft.Size = new System.Drawing.Size(264, 427);
-            this.PnlLeft.TabIndex = 4;
+            this.PnlLeft.TabIndex = 0;
             // 
             // DataRequest
             // 

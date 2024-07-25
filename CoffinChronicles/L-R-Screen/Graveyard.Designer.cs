@@ -70,7 +70,7 @@
             this.BtnExit.Location = new System.Drawing.Point(785, 0);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(31, 31);
-            this.BtnExit.TabIndex = 0;
+            this.BtnExit.TabIndex = 5;
             this.BtnExit.Text = "X";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
@@ -82,7 +82,7 @@
             this.BtnLogOut.Location = new System.Drawing.Point(702, 5);
             this.BtnLogOut.Name = "BtnLogOut";
             this.BtnLogOut.Size = new System.Drawing.Size(75, 23);
-            this.BtnLogOut.TabIndex = 0;
+            this.BtnLogOut.TabIndex = 4;
             this.BtnLogOut.Text = "Abmelden";
             this.BtnLogOut.UseVisualStyleBackColor = true;
             this.BtnLogOut.Click += new System.EventHandler(this.BtnLogOut_Click);
@@ -97,7 +97,7 @@
             this.PnlBottom.Location = new System.Drawing.Point(0, 458);
             this.PnlBottom.Name = "PnlBottom";
             this.PnlBottom.Size = new System.Drawing.Size(816, 31);
-            this.PnlBottom.TabIndex = 1;
+            this.PnlBottom.TabIndex = 0;
             // 
             // BtnData
             // 
@@ -107,7 +107,7 @@
             this.BtnData.Name = "BtnData";
             this.BtnData.Size = new System.Drawing.Size(30, 31);
             this.BtnData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnData.TabIndex = 5;
+            this.BtnData.TabIndex = 2;
             this.BtnData.TabStop = false;
             this.BtnData.Click += new System.EventHandler(this.BtnData_Click);
             // 
@@ -119,7 +119,7 @@
             this.BtnGrave.Name = "BtnGrave";
             this.BtnGrave.Size = new System.Drawing.Size(31, 31);
             this.BtnGrave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnGrave.TabIndex = 4;
+            this.BtnGrave.TabIndex = 3;
             this.BtnGrave.TabStop = false;
             this.BtnGrave.Click += new System.EventHandler(this.BtnGrave_Click);
             // 
@@ -131,7 +131,7 @@
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(31, 31);
             this.BtnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnHome.TabIndex = 3;
+            this.BtnHome.TabIndex = 1;
             this.BtnHome.TabStop = false;
             this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
@@ -144,7 +144,7 @@
             this.PnlMiddle.Location = new System.Drawing.Point(0, 31);
             this.PnlMiddle.Name = "PnlMiddle";
             this.PnlMiddle.Size = new System.Drawing.Size(816, 427);
-            this.PnlMiddle.TabIndex = 3;
+            this.PnlMiddle.TabIndex = 0;
             // 
             // Tombstone3
             // 
@@ -153,7 +153,7 @@
             this.Tombstone3.Name = "Tombstone3";
             this.Tombstone3.Size = new System.Drawing.Size(125, 148);
             this.Tombstone3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone3.TabIndex = 2;
+            this.Tombstone3.TabIndex = 0;
             this.Tombstone3.TabStop = false;
             // 
             // Tombstone2
@@ -163,7 +163,7 @@
             this.Tombstone2.Name = "Tombstone2";
             this.Tombstone2.Size = new System.Drawing.Size(125, 148);
             this.Tombstone2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Tombstone2.TabIndex = 1;
+            this.Tombstone2.TabIndex = 0;
             this.Tombstone2.TabStop = false;
             // 
             // Tombstone1
